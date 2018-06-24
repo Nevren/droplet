@@ -101,11 +101,13 @@ $nav-animation-time: background 0.25s ease-in;//for link highlighting or hover (
 	#mobile-menu--full {
 	  height: 0px;
 	  width: 0px;
+	  *{display: none;}
 	}
 
 	//State 2
 	#toggle:checked {
 		~ #mobile-menu--full {
+		*{display: block;}
 		  height: auto;
 		  width: 100%;
 		  overflow: auto;

@@ -1078,6 +1078,8 @@ Actual CSS Grid Classes
   .nav #mobile-menu--full {
     height: 0px;
     width: 0px; }
+    .nav #mobile-menu--full * {
+      display: none; }
   .nav #toggle:checked ~ #mobile-menu--full {
     height: auto;
     width: 100%;
@@ -1087,6 +1089,8 @@ Actual CSS Grid Classes
     right: 0;
     left: 0;
     background-color: rgba(247, 247, 247, 0.95); }
+    .nav #toggle:checked ~ #mobile-menu--full * {
+      display: block; }
   .nav .mobile-menu--list {
     list-style-type: none;
     margin: 0;
@@ -1152,15 +1156,6 @@ Actual CSS Grid Classes
     .sub-nav .desktop-menu--list .active {
       border-bottom: 2px solid #0e6991;
       background-color: #a7def7; }
-
-.banner--flex.has-image.banner-image--default {
-  background-image: url("../images/img_preaching.jpg") !important; }
-
-.banner-image--about {
-  background-image: url(""); }
-
-.banner-image--forms {
-  background-image: url(""); }
 
 .banner--flex {
   display: flex;
