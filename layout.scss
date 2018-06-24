@@ -1,0 +1,23 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $font-family-1;
+	text-align:center;
+	background-color: $color-white-3;
+	color: $body-color-text;
+	margin-top: $body-margin-top;
+
+	@media #{$tablet}{
+		margin-top: $body-margin-top;
+	}
+}
+
+.content {
+	margin-top: 5.375rem !important;
+
+	@media #{$tablet} {
+		margin-top: 5.375rem !important;
+	}
+}

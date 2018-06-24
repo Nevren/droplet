@@ -1,0 +1,20 @@
+.card {
+	background-color: $white;
+	border: $border-1 $color-grey-1;
+	border-radius: 5px;
+	display: inline-block;
+	padding: $margin-padding-standard;
+}
+
+.is-link {
+	&:hover {
+		border-radius: 0px;
+		box-shadow: $shadow-input $color-grey-1;
+		cursor: pointer;
+		border-color: $color-green;
+	}
+}
+
+.caption {
+	font-size: 0.75rem;
+}

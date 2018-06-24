@@ -1,0 +1,99 @@
+.hidden { display: none !important; }
+
+.hidden--mobile {
+	display: none !important;
+	@media #{$tablet}{
+		display: inherit !important;
+	}
+}
+
+.hidden--tablet {
+	display: inherit;
+	@media #{$tablet}{
+		display: none !important;
+	}
+	@media #{$desktop}{
+		display: inherit !important;
+	}
+}
+
+.hidden--desktop {
+	display: inherit;
+	@media #{$desktop}{
+		display: none !important;
+	}
+}
+
+.float--left   { float: left; }
+.float--right  { float: right; }
+.float--clear  { float: clear; }
+.relative      { position: relative; }
+
+.align--right  { text-align: right; }
+.align--left   { text-align: left; }
+.align--center { text-align: center; }
+
+.align--right {
+	&.mobile--center {
+		text-align: center;
+		@media #{$tablet} {
+			text-align: right;
+		}
+	}
+}
+
+.align--left {
+	&.mobile--center {
+		text-align: center;
+		@media #{$tablet} {
+			text-align: left;
+		}
+	}
+}
+
+.align--center {
+	&.mobile--center {
+		text-align: center;
+		@media #{$tablet} {
+			text-align: center;
+		}
+	}
+}
+
+.align--bottom { vertical-align: bottom; }
+.align--top    { vertical-align: top; }
+.align--middle { vertical-align: middle; }
+
+.text--black   { color: $color-black-1; &a:hover { color: $color-grey-3; } }
+.text--blue    { color: $color-blue;    &a:hover { color: $color-blue-fade; } }
+.text--green   { color: $color-green;   &a:hover { color: $color-green-fade; } }
+.text--grey    { color: $color-grey-3;  &a:hover { color: $color-grey-1; } }
+.text--orange  { color: $color-orange;  &a:hover { color: $color-orange-fade; } }
+.text--primary { color: $color-primary; &a:hover { color: $color-primary-fade; } }
+.text--purple  { color: $color-purple;  &a:hover { color: $color-purple-fade; } }
+.text--red     { color: $color-red;     &a:hover { color: $color-red-fade; } }
+.text--white   { color: $color-white-2; &a:hover { color: $color-white-1; } }
+.text--yellow  { color: $color-yellow;  &a:hover { color: $color-yellow-fade; } }
+
+.shadow {
+	box-shadow: $shadow;
+}
+
+.text-shadow {
+	text-shadow: $shadow;
+}
+
+.margin--left   { margin-left:   $margin-padding-standard !important; }
+.margin--right  { margin-right:  $margin-padding-standard !important; }
+.margin--top    { margin-top:    $margin-padding-standard !important; }
+.margin--bottom { margin-bottom: $margin-padding-standard !important; }
+
+.no-margin         { margin: 0; }
+.no-margin--left   { margin-left:   0; }
+.no-margin--right  { margin-right:  0; }
+.no-margin--top    { margin-top:    0; }
+.no-margin--bottom { margin-bottom: 0; }
+
+.relative {
+	position: relative;
+}

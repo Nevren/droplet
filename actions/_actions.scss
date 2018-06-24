@@ -1,0 +1,135 @@
+$button-padding: calc(#{$margin-padding-standard} / 2);
+
+.button, button {
+	background: $color-primary;
+	border-radius: $border-radius;
+	border: 0;
+	color: $color-white-2;
+	display: inline-block;
+	font-size: $font-size-description;
+	font-weight: $font-weight-links;
+	padding: $button-padding $margin-padding-standard;
+	text-decoration: none;
+	cursor: pointer;
+
+	&:not(.disabled):hover, &:not(.disabled):focus {
+		background: $color-primary-fade;
+		transition: $animation-hover-buttons;
+	}
+
+	&.has-margin {
+		margin: $margin-padding-standard;
+	}
+
+	&.button--shadow { box-shadow: $shadow-contrast; }
+	&.disabled { opacity: 0.25; cursor: not-allowed; }
+
+	&.button--black   { background: $color-black-1; &:not(.disabled):hover, &:not(.disabled):focus { background: $color-grey-3;       } }
+	&.button--blue    { background: $color-blue;    &:not(.disabled):hover, &:not(.disabled):focus { background: $color-blue-fade;    } }
+	&.button--green   { background: $color-green;   &:not(.disabled):hover, &:not(.disabled):focus { background: $color-green-fade;   } }
+	&.button--grey    { background: $color-grey-3;  &:not(.disabled):hover, &:not(.disabled):focus { background: $color-grey-2;       } }
+	&.button--orange  { background: $color-orange;  &:not(.disabled):hover, &:not(.disabled):focus { background: $color-orange-fade;  } }
+	&.button--primary { background: $color-primary; &:not(.disabled):hover, &:not(.disabled):focus { background: $color-primary-fade; } }
+	&.button--purple  { background: $color-purple;  &:not(.disabled):hover, &:not(.disabled):focus { background: $color-purple-fade;  } }
+	&.button--red     { background: $color-red;     &:not(.disabled):hover, &:not(.disabled):focus { background: $color-red-fade;     } }
+	&.button--white   { background: $color-white-3; 
+						color: $color-grey-3;   	&:not(.disabled):hover, &:not(.disabled):focus { background: $color-white-1;      } }
+	&.button--yellow  { background: $color-yellow;  &:not(.disabled):hover, &:not(.disabled):focus { background: $color-yellow-fade;  } }
+
+	&.button--submit {//use with &.input-submit while in fieldset--submit
+		border-bottom-left-radius: 0;
+		border-top-left-radius: 0;
+		order: 2;
+		flex: 1 1 auto;
+		align-self: auto;
+		margin: 0.5rem 0;
+	}
+
+	&.button--to-top {
+		position: fixed;
+		bottom: 0.5rem;
+		right: 1rem;
+	}
+}
+
+.link {
+	color: $color-primary;
+	display: inline-block;
+	font-size: $font-size-description;
+	font-weight: $font-weight-links;
+	text-decoration: none;
+	cursor: pointer;
+
+	&:not(.disabled):hover, &:not(.disabled):focus {
+		color: $color-primary-fade;
+		transition: $animation-hover-buttons;
+	}
+
+	&.link--shadow { text-shadow: $shadow-contrast; }
+	&.disabled { opacity: 0.25; cursor: not-allowed; }
+
+	&.link--black   { color: $color-black-1; &:not(.disabled):hover, &:not(.disabled):focus { color: $color-grey-3;      } }
+	&.link--blue    { color: $color-blue;    &:not(.disabled):hover, &:not(.disabled):focus { color: $color-blue-fade;   } }
+	&.link--green   { color: $color-green;   &:not(.disabled):hover, &:not(.disabled):focus { color: $color-green-fade;  } }
+	&.link--grey    { color: $color-grey-3;  &:not(.disabled):hover, &:not(.disabled):focus { color: $color-grey-1;      } }
+	&.link--orange  { color: $color-orange;  &:not(.disabled):hover, &:not(.disabled):focus { color: $color-orange-fade; } }
+	&.link--primary { color: $color-primary; &:not(.disabled):hover, &:not(.disabled):focus { color: $color-primary-fade;} }
+	&.link--purple  { color: $color-purple;  &:not(.disabled):hover, &:not(.disabled):focus { color: $color-purple-fade; } }
+	&.link--red     { color: $color-red;     &:not(.disabled):hover, &:not(.disabled):focus { color: $color-red-fade;    } }
+	&.link--white   { color: $color-white-3; &:not(.disabled):hover, &:not(.disabled):focus { color: $color-white-1;     } }
+	&.link--yellow  { color: $color-yellow;  &:not(.disabled):hover, &:not(.disabled):focus { color: $color-yellow-fade; } }
+}
+
+.input, input {
+	background-color: $color-white-2;
+	border-radius: $border-radius;
+	border: $border-1 $color-primary;
+	color: $color-grey-3;
+	display: inline-block;
+	margin-top: $margin-padding-standard;
+	min-width: 25px;//This could potentially change
+	padding: $margin-padding-standard calc(#{$margin-padding-standard} * 2);
+	width: 100%;//This could potentially change
+
+	&:focus { box-shadow: $shadow-input $color-primary; }
+
+	&.input--black   { border-color: $color-black-1; &:focus { box-shadow: $shadow-input $color-black-1; } }
+	&.input--blue    { border-color: $color-blue;    &:focus { box-shadow: $shadow-input $color-blue; } }
+	&.input--green   { border-color: $color-green;   &:focus { box-shadow: $shadow-input $color-green; } }
+	&.input--grey    { border-color: $color-grey-3;  &:focus { box-shadow: $shadow-input $color-grey-3; } }
+	&.input--orange  { border-color: $color-orange;  &:focus { box-shadow: $shadow-input $color-orange; } }
+	&.input--primary { border-color: $color-primary; &:focus { box-shadow: $shadow-input $color-primary; } }
+	&.input--purple  { border-color: $color-purple;  &:focus { box-shadow: $shadow-input $color-purple; } }
+	&.input--red   	 { border-color: $color-red;     &:focus { box-shadow: $shadow-input $color-red; } }
+	&.input--white   { border-color: $color-white-2; &:focus { box-shadow: $shadow-input $color-white-2; } }
+	&.input--yellow  { border-color: $color-yellow;  &:focus { box-shadow: $shadow-input $color-yellow; } }
+
+	&.disabled { opacity: 0.25; &:focus { box-shadow: 0 0 0 0 !important; } }
+
+	&.input--submit {//use with &.button-submit while in fieldset--submit
+		border-bottom-right-radius: 0;
+		border-top-right-radius: 0;
+		order: 1;
+		flex: 5 1 auto;
+		align-self: auto;
+		margin: 0.5rem 0;
+
+	}
+}
+
+.input--label {
+	font-size: 0.9rem;
+}
+
+.fieldset--submit {
+	border: none;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-content: center;
+
+	height: 3.5rem;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+}

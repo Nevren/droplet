@@ -1,0 +1,208 @@
+//Navigation Bar Height
+$nav-height: 5rem;
+$sub-nav-height: 3rem;
+$border-size: 2px solid;
+$nav-height-desktop: 2.0rem;//how high is the nav on tablet-desktop? (2.0rem)
+
+//Navigation Link Width
+$nav-link-size: 4rem;//width of links (4rem)
+
+//Navigation Colors
+$nav-color-theme: lighten(#79cdf2, 10%);//color of active and highlighted links (lighten(#79cdf2, 10%)
+$text-color: #333333;//color of the text of the links and nav
+$nav-background-color:  rgba(247,247,247,0.95);//color of the nav bar itself (rgba(247,247,247,0.95)
+$nav-animation-time: background 0.25s ease-in;//for link highlighting or hover (background 0.25s ease-in)
+
+.nav {
+	background-color: $nav-background-color;
+	height: auto;
+	position: fixed;
+	left: 0px; right: 0px; top: 0px;
+	width: 100%;
+	z-index: 5;
+
+	.flex-wrapper {
+		display: flex;
+		align-items: center;
+		margin: auto;
+		max-width: $content-width;
+		height: $nav-height;
+		padding: 0 $margin-padding-standard;
+
+		.nav-logo {
+			color: $text-color;
+			margin: 0;
+
+			@media #{$tablet} {
+				font-size: $font-size-p2;	
+			}
+
+			a {
+				text-decoration: none;
+				color: $text-color;
+			}
+		}
+
+		.desktop-menu--list {
+			display: inline;
+			list-style-type: none;
+			margin: 0 0 0 auto;
+			padding: 0;
+
+			li {
+				display: inline-block;
+				max-height: $nav-height;
+
+				&:hover {
+					background-color: $nav-color-theme;
+				}
+
+				a {
+					text-decoration: none;
+					color: $text-color;
+					display: block;
+					font-size: 0.9rem;
+					margin:0;
+					min-width: $nav-link-size;
+					text-transform: uppercase;
+					padding: $nav-height-desktop $margin-padding-standard;
+					max-height: $nav-height;
+				}
+			}
+
+			.active {
+				border-bottom: $border-size darken($nav-color-theme, 50%);
+				background-color: $nav-color-theme;
+			}
+		}
+	}
+
+	.mobile-menu--bars {
+		display: inline-block;
+		margin: 0 0 0 auto;
+
+		i {
+			padding: 1rem;
+			border-radius: $border-radius;
+			background-color: $nav-color-theme;
+
+			&:hover {
+				background-color: darken($nav-color-theme, 10%);
+				transition: $nav-animation-time;
+			}
+		}
+	}
+
+	.mobile-menu--label {
+		cursor: pointer;
+	}
+
+	//State 1
+	#mobile-menu--full {
+	  height: 0px;
+	  width: 0px;
+	}
+
+	//State 2
+	#toggle:checked {
+		~ #mobile-menu--full {
+		  height: auto;
+		  width: 100%;
+		  overflow: auto;
+		  position: absolute;
+		  top: $nav-height;
+		  right: 0;
+		  left: 0;
+		  background-color: $nav-background-color;
+		}
+	}
+
+	.mobile-menu--list {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		float: right;
+
+		@media #{$tablet} {
+			display: block;
+		}
+
+		li {
+			text-align: right;
+
+			&:hover, &:active {
+				background-color: $nav-color-theme;
+				transition: $nav-animation-time;
+			}
+
+			&.active {
+				background-color: $nav-color-theme;
+				border-right: $border-size darken($nav-color-theme, 50%);
+			}
+		}
+
+		a {
+			display: block;
+			font-size: 0.9rem;
+			min-width: $nav-link-size;
+			padding-top: $margin-padding-standard;
+			padding-bottom: $margin-padding-standard;
+			padding-right: $margin-padding-standard; 
+			text-transform: uppercase;
+			color: $text-color;
+			text-decoration: none;
+		}
+	}
+}
+
+.sub-nav {//For additional links...
+	margin-top: $nav-height;
+	z-index: 4;
+	width: 100%;
+	height: auto;
+	background-color: darken($nav-color-theme, 50%);
+	
+	.flex-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: auto;
+		max-width: $content-width;
+		height: $sub-nav-height;
+		padding: 0 $margin-padding-standard;
+	}
+
+	.desktop-menu--list {
+		display: inline;
+		list-style-type: none;
+		margin: 0 0 0 auto;
+		padding: 0;
+
+		li {
+			display: inline-block;
+			max-height: $sub-nav-height;
+
+			&:hover {
+				background-color: $nav-color-theme;
+			}
+
+			a {
+				text-decoration: none;
+				color: $text-color;
+				display: block;
+				font-size: 0.9rem;
+				margin:0;
+				min-width: $nav-link-size;
+				text-transform: uppercase;
+				padding: $nav-height-desktop/2 $margin-padding-standard;
+				max-height: $sub-nav-height;
+			}
+		}
+
+		.active {
+			border-bottom: $border-size darken($nav-color-theme, 50%);
+			background-color: $nav-color-theme;
+		}
+	}
+}

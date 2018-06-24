@@ -1,0 +1,150 @@
+$table-padding: 0 0.25rem;
+
+.table, table {
+	margin: $margin-center;
+	max-width: $content-width;
+	width: 100%;
+
+	p {
+		margin: $table-padding;
+	}
+}
+
+.table-header {
+	//MOBILE
+	display: block;
+	left: -9999px;
+	position: absolute;
+
+	//TABLET/DESKTOP
+	@media #{$tablet-large} {
+		border-top: $border-1 $color-primary;
+		display: table;
+		position: initial;
+		width: 100%;
+	}
+}
+
+.table-navigation {//Not fully useable. Needs Work.
+	//MOBILE
+	position: fixed;
+	top: 6.5rem;
+	right: 0;
+
+	//TABLET/DESKTOP
+	@media #{$tablet-large} {
+		top: 3.5rem;
+	}
+}
+
+.table-row {
+	border-top: $border-1 $color-primary;
+	display: table;
+	width: 100%;
+}
+
+.table-column {
+	//MOBILE
+	background-color: $color-primary-fade;
+	color: $color-white-2;
+	display: block;
+	font-weight: bold;
+	hyphens: auto;
+	margin: $margin-center;
+	text-align: left;
+
+	&:first-child { background: $color-primary; }
+
+	//TABLET/DESKTOP
+	@media #{$tablet-large}{
+		display: table-cell;
+		width: initial;
+
+		text-align: center;
+
+		&:not(:first-child) {
+			text-align: left;
+		}
+	}
+
+	.row-label {
+		margin: 0.83rem 0.5rem;
+	}
+
+	//labels, this is fairly specific to the table in question. Consider moving to custom file
+	.column-label--day:before   { padding: $table-padding; float: left;  content:"Day: ";   @media #{$tablet-large}{ content:""; } }
+	.column-label--time:before  { padding: $table-padding; float: left;  content:"Time: ";  @media #{$tablet-large}{ content:""; } }
+	.column-label--event:before { padding: $table-padding; float: left;  content:"Event: "; @media #{$tablet-large}{ content:""; } }
+	.column-label--notes:before { padding: $table-padding; float: left;  content:"Notes: "; @media #{$tablet-large}{ content:""; } }
+	.column-label--where:before { padding: $table-padding; float: left;  content:"Where: "; @media #{$tablet-large}{ content:""; } }
+
+	//based on 12 - (second class is legacy)
+	&.table-column--1,   &.table-column-8   { width: 100%; @media #{$tablet-large} { width: 8.3333%; } }  //8.3333
+	&.table-column--2,   &.table-column-16  { width: 100%; @media #{$tablet-large} { width: 16.6666%; } } //16.6666
+	&.table-column--3,   &.table-column-25  { width: 100%; @media #{$tablet-large} { width: 25%; } }      //25
+	&.table-column--4,   &.table-column-33  { width: 100%; @media #{$tablet-large} { width: 33.3333%; } } //33.3333
+	&.table-column--5,   &.table-column-41  { width: 100%; @media #{$tablet-large} { width: 41.6666%; } } //41.6666
+	&.table-column--6,   &.table-column-50  { width: 100%; @media #{$tablet-large} { width: 50%; } }      //50
+	&.table-column--7,   &.table-column-58  { width: 100%; @media #{$tablet-large} { width: 58.3333%; } } //58.3333
+	&.table-column--8,   &.table-column-66  { width: 100%; @media #{$tablet-large} { width: 66.6666%; } } //66.6666
+	&.table-column--9,   &.table-column-75  { width: 100%; @media #{$tablet-large} { width: 75%; } }      //75
+	&.table-column--10,  &.table-column-83  { width: 100%; @media #{$tablet-large} { width: 83.3333%; } } //83.3333
+	&.table-column--11,  &.table-column-91  { width: 100%; @media #{$tablet-large} { width: 91.6666%; } } //91.6666
+	&.table-column--12,  &.table-column-100 { width: 100%; @media #{$tablet-large} { width: 100%; } }     //100
+	//ADDONS
+	&.table-column--2b, &.table-column-20   { width: 100%; @media #{$tablet-large} { width: 20%; } }      //20 - for a row of 5
+}
+
+.table-color--black { 
+	border-color: $color-black-1;
+	.table-column:not(:first-child) { background-color: $color-grey-3; }
+	.table-column:first-child { background: $color-black-1; }
+}
+
+.table-color--blue { 
+	border-color: $color-blue;
+	.table-column:not(:first-child) { background-color: $color-blue-fade; }
+	.table-column:first-child { background: $color-blue; }
+}
+
+.table-color--green {
+	border-color: $color-green;
+	.table-column:not(:first-child) { background-color: $color-green-fade; }
+	.table-column:first-child { background: $color-green; }
+}
+
+.table-color--grey { 
+	border-color: $color-grey-3;
+	.table-column:not(:first-child) { background-color: $color-grey-2; }
+	.table-column:first-child { background: $color-grey-3; }
+}
+
+.table-color--orange {
+	border-color: $color-orange;
+	.table-column:not(:first-child) { background-color: $color-orange-fade; }
+	.table-column:first-child { background: $color-orange; }
+}
+
+.table-color--primary {
+	border-color: $color-primary;
+	.table-column:not(:first-child) { background-color: $color-primary-fade; }
+	.table-column:first-child { background: $color-primary; }
+}
+
+.table-color--purple {
+	border-color: $color-purple;
+	.table-column:not(:first-child) { background-color: $color-purple-fade; }
+	.table-column:first-child { background: $color-purple; }
+}
+
+.table-color--red {
+	border-color: $color-red;
+	.table-column:not(:first-child) { background-color: $color-red-fade; }
+	.table-column:first-child { background: $color-red; }
+}
+
+.table-color--yellow {
+	border-color: $color-yellow;
+	.table-column:not(:first-child) { background-color: $color-yellow-fade; }
+	.table-column:first-child { background: $color-yellow; }
+}

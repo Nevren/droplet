@@ -1,0 +1,117 @@
+$banner-flex-height: 350px;
+
+// .banner--hero {
+// 	//MOBILE
+// 	background-image: none;
+// 	background-position: center;
+// 	background-position-y: 4rem;
+// 	background-repeat: no-repeat;
+// 	background-size: cover;
+// 	height: 350px;
+// 	margin: $margin-center;
+// 	max-width: $banner-hero-width;//Set at 1920 if intending to create roll off for background. 100% if otherwise unable to determine.
+// 	position: relative;
+// 	background-attachment: scroll;
+// 	background: linear-gradient(to right, #7d7e7d 0%,$black 100%);
+
+// 	//TABLET
+// 	@media screen and (min-width:$tablet-break-extra) {
+// 		// background-position: $banner-hero-position-tablet;
+// 		background-position: initial;
+// 	}
+
+// 	//DESKTOP
+// 	@media screen and (min-width:1200px) {
+// 		// height: $banner-hero-height;
+// 		// background-position: -10rem;
+// 	}
+
+// 	p {
+// 		color: $color-white-1;
+// 		// font-weight: $font-weight-links;
+// 		text-shadow: $shadow-contrast;
+// 		&.label {
+// 			font-size: $font-size-p3;
+// 			margin-bottom: 0;
+// 		}
+// 	}
+
+// 	.banner--faded {
+// 		// background-color: $banner-color-hero;
+// 		height: 100%;
+// 	}
+
+// 	.banner--text {
+// 		left: $margin-padding-standard;
+// 		position: absolute;
+// 		right: $margin-padding-standard;
+// 		top: 50%;
+// 		font-size: 1.25rem;
+// 	}
+
+// 	&.banner-height--large {
+// 		height: $banner-hero-height;
+		
+// 		@media screen and (min-width:$tablet-break) {
+// 			height: $banner-hero-height-large;
+// 		}
+// 	}
+// }
+
+$banner-gradient: linear-gradient(to right, #7d7e7d 0%,$color-blue 100%) !default;
+$banner-image: "../images/img_preaching.jpg";
+//banner images - move to custom
+.banner--flex.has-image.banner-image--default {
+	background-image: url($banner-image) !important;
+}
+
+.banner-image--about {
+	background-image: url("");
+}
+
+.banner-image--forms {
+	background-image: url("");
+}
+
+.banner--flex {
+	display: flex;
+	height: $banner-flex-height;
+	align-items: center;
+	justify-content: center;
+	overflow: auto;
+	background: $banner-gradient;
+
+	&.has-image {
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	&.has-overlay {
+		&::before {
+			content: "";
+			width: 100%;
+			height: $banner-flex-height;
+			background-color: $black;
+			opacity: 0.25;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 0;
+		}
+	}
+
+	.banner--text {
+		color: $color-white-1;
+		font-size: 1.25rem;
+		left: $margin-padding-standard;
+		margin-top: 7.063rem;
+		padding: 0 $margin-padding-standard;
+		right: $margin-padding-standard;
+		text-shadow: $shadow-contrast;
+		z-index: 1;
+
+		@media #{$tablet} {
+			margin-top: 5.375rem;
+		}
+	}
+}

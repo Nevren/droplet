@@ -1,0 +1,35 @@
+//----- Colors -----//
+//Greys
+$color-grey-1: #ccc;//(#cccccc)
+$color-grey-2: #777;//(#777777)
+$color-grey-3: #333;//(#333333)
+
+$color-white-1: #ffffff;//(#ffffff)
+$color-white-2: #f7f7f7;//(#f7f7f7)
+$color-white-3: #e2e2e2;//(#e2e2e2)
+$white: #FFFFFF;
+
+$color-black-1: #000000;//(#000000)
+$black: #000000;
+
+//Colors - fade is color for hover
+//Primary is used across the site for various effects, can be anything set here
+$color-primary: #439a86;//(#439a86)
+$color-primary-fade: lighten($color-primary, 10%);//(#65bba6)
+$color-secondary: #9A9A9A;
+$color-secondary-fade: lighten($color-secondary, 10%);
+
+$color-purple: #8f4dae;
+$color-purple-fade: lighten($color-purple, 10%);
+$color-blue: #286483;
+$color-blue-fade: lighten($color-blue, 10%);
+$color-green: #33993c;
+$color-green-fade: lighten($color-green, 10%);
+$color-red: #ac4f51;
+$color-red-fade: lighten($color-red, 10%);
+$color-yellow: #FFFB19;
+$color-yellow-fade: lighten($color-yellow, 10%);
+$color-orange: #FF8C63;
+$color-orange-fade: lighten($color-orange, 10%);
+
+$body-color-text: $color-grey-3;//($color-grey-3)

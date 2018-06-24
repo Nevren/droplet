@@ -1,0 +1,73 @@
+//This file contains variables not specific to a component
+$font-family-1: 'Open Sans', sans-serif;//Open Sans
+
+//-----  Screen Breaks and Settings -----//
+
+//Screen Heights
+$mobile-height:  480px;
+$desktop-height: 720px;
+
+//Widths
+$content-width:        1200px !default;
+
+$content-width-large:  1280px !default;//(1280px)
+$content-width-medium: 1200px !default;//(1200px)
+$content-width-small:  720px !default;//(720px)
+
+//BreakPoints
+$phone:         "all and (max-width: 470px)" !default;
+$tablet:        "all and (min-width: 680px)" !default;
+$desktop:       "all and (min-width: 890px)" !default;
+$tablet-large:  "all and (min-width: 708px)" !default;
+// $desktop-large: "all and (min-width: 96em)" !default;
+
+//-----  Spacing -----//
+$margin-padding-standard: 1rem;//(0.50rem)
+$padding-underline: 0.25rem;//Offsets border applied (0.25rem)
+$margin-center: 0 auto;
+
+//----- Shadows -----//
+$shadow: 0px 0px 15px $color-black-1;//generic shadow
+$shadow-contrast: 2px 2px 2px $color-black-1;//helps with seeing the object on top of images
+$shadow-input: 0px 0px 10px;//primarily used for input focus
+
+//----- Animations -----//
+$animation-hover-buttons: background 0.1s ease-in;
+$animation-transition: all 0.2s ease-in-out !default;
+
+//----- Borders -----//
+$border-1: 1px solid;
+$border-2: 2px solid;
+$border-radius: 2px;
+
+//----- Grid -----//
+$grid-gutter: 1rem !default;
+
+/*These variables are for changes to various 
+elements that remain constant (such as images/logos/branding) 
+There are many component specific variables in settings.*/
+/*----- BODY -----*///:layout.scss
+$body-margin-top: 0;//height to offset for header ($header-height)
+
+/*----- BANNERS -----*///:banners.scss
+//Hero-Banner
+$banner-hero-height: 275px;//how high is the hero element? (225px)
+$banner-hero-height-large: 550px;//how high is the hero element? (550px)
+$banner-hero-position: center -5rem;//position of image (0 30%)
+$banner-hero-position-tablet: center -6rem;//position of image (0 30%)
+$banner-hero-position-desktop: center -8rem;//position of image on full desktop
+$banner-hero-width: 100%;//how far should the image stretch? (100%)
+$banner-text-height: 45%;//positioning of text on page (33%)
+$banner-attachment: fixed;//fixed or scroll
+
+/*----- SPLASH -----*///:splash.scss - incomplete settings, splash will likely be deprecated.
+$splash-height-mobile: $mobile-height;//($mobile-height)
+$splash-height-tablet: $desktop-height;//($desktop-height)
+
+/*----- GRID -----*///:grid.scss
+$grid-divider-thickness: 5px;//thickness of dividers(5px)
+$grid-image-minimum: 300px;//the minimum size that an image can be in the feed (300px)
+$grid-image-minimum-mobile: 100%;
+
+/*----- FOOTERS -----*///:footer.scss
+$footer-width: $content-width;//($content-width)

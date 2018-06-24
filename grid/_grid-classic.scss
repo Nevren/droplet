@@ -1,0 +1,92 @@
+//Seperator makes a horizontal rule to intended to seperate rows
+.seperator, .seperator-small {
+	border: none;
+	border-top: $grid-divider-thickness solid $grid-color-divider;
+	margin: 0;
+}
+
+.seperator-small {
+	border-top: calc(#{$grid-divider-thickness} / 2) solid $color-grey-1;
+}
+
+//Place around rows to force them to join with the rest of the page's max width
+.row--constrain, .row--contain {
+	max-width: $content-width;
+	margin: $margin-center;
+}
+
+//A simple containing element for columns. Place within row--constrain
+.row {
+	margin: $margin-center;
+	padding: 0;
+	width: 100%;
+
+	//Color the row
+	&.row-color--black   { background-color: $color-black-1; color: $color-white-2;}
+	&.row-color--blue    { background-color: $color-blue; }
+	&.row-color--green   { background-color: $color-green; }
+	&.row-color--grey    { background-color: $color-grey-3; color: $color-white-2;}
+	&.row-color--orange  { background-color: $color-orange; }
+	&.row-color--primary { background-color: $color-primary; }
+	&.row-color--purple  { background-color: $color-purple; }
+	&.row-color--red     { background-color: $color-red; }
+	&.row-color--white   { background-color: $color-white-2; }
+	&.row-color--yellow  { background-color: $color-yellow; }
+
+	&.row-padding--top, &.row-padding--bottom {
+		padding-top: $margin-padding-standard;
+	}
+}
+
+//A simple column, on its own it is a full page horizontally
+.column {
+	display: inline-table;
+	margin: $margin-center;
+	overflow: hidden;
+	padding: 0 $margin-padding-standard;
+	width: 100%;
+
+	p, h3 { margin: $margin-padding-standard; }
+
+	img {
+		margin: $margin-padding-standard 0;
+		max-width: 100%;
+		min-width: $grid-image-minimum-mobile;
+
+		//TABLET/DESKTOP
+		@media #{$tablet}{
+			min-width: $grid-image-minimum;
+		}
+	}
+
+	iframe { //For embedded video. Currently only tested for column-33, probably broken in others.
+		height: 50vw;
+		max-width: 100%;
+		min-height: 175px;
+		min-width: $grid-image-minimum-mobile;
+		width: 100%;
+
+  		//TABLET/DESKTOP
+		@media #{$tablet}{
+  			height: 20vw;
+  			max-height: 250px;
+  			min-width: $grid-image-minimum;
+		}
+	}
+
+	//based on 12 - (second class is legacy)
+	&.column--1,  &.column-8   { @media #{$tablet} { width: 8.3333%; } }  //8.3333
+	&.column--2,  &.column-16  { @media #{$tablet} { width: 16.6666%; } } //16.6666
+	&.column--3,  &.column-25  { @media #{$tablet} { width: 25%; } }      //25
+	&.column--4,  &.column-33  { @media #{$tablet} { width: 33.3333%; } } //33.3333
+	&.column--5,  &.column-41  { @media #{$tablet} { width: 41.6666%; } } //41.6666
+	&.column--6,  &.column-50  { @media #{$tablet} { width: 50%; } }      //50
+	&.column--7,  &.column-58  { @media #{$tablet} { width: 58.3333%; } } //58.3333
+	&.column--8,  &.column-66  { @media #{$tablet} { width: 66.6666%; } } //66.6666
+	&.column--9,  &.column-75  { @media #{$tablet} { width: 75%; } }      //75
+	&.column--10, &.column-83  { @media #{$tablet} { width: 83.3333%; } } //83.3333
+	&.column--11, &.column-91  { @media #{$tablet} { width: 91.6666%; } } //91.6666
+	&.column--12, &.column-100 { @media #{$tablet} { width: 100%; } }     //100
+	//Addons
+	&.column--2b,&.column-20   { @media #{$tablet} { width: 20%; } }    //20 - for a row of 5
+}
