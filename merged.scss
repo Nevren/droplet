@@ -4,19 +4,18 @@
 @import 'color/color';
 @import 'typography/typography';
 @import 'variables/variables';
-@import 'layout';
-@import 'utility/utility';
 
-// @import 'grid';//optional - uses old grid structure
-@import 'grid/grid';//css-grid
+//Structure
+@import 'layout/layout';
+@import 'grid/grid';
+
+//Modules
 @import 'actions/actions';
-
 @import 'navigation/navigation';
 @import 'banner/banner';
-@import 'table';
+@import 'table/table';
 @import 'footer/footer';
 @import 'card/card';
 
-//Third Party
-// @import 'vendor/verselink';//include this if using verselink
-// @import 'vendor/font-awesome';//include this if using font awesome
+//Misc...
+@import 'utility/utility';

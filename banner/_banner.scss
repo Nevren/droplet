@@ -1,66 +1,8 @@
 $banner-flex-height: 350px;
-
-// .banner--hero {
-// 	//MOBILE
-// 	background-image: none;
-// 	background-position: center;
-// 	background-position-y: 4rem;
-// 	background-repeat: no-repeat;
-// 	background-size: cover;
-// 	height: 350px;
-// 	margin: $margin-center;
-// 	max-width: $banner-hero-width;//Set at 1920 if intending to create roll off for background. 100% if otherwise unable to determine.
-// 	position: relative;
-// 	background-attachment: scroll;
-// 	background: linear-gradient(to right, #7d7e7d 0%,$black 100%);
-
-// 	//TABLET
-// 	@media screen and (min-width:$tablet-break-extra) {
-// 		// background-position: $banner-hero-position-tablet;
-// 		background-position: initial;
-// 	}
-
-// 	//DESKTOP
-// 	@media screen and (min-width:1200px) {
-// 		// height: $banner-hero-height;
-// 		// background-position: -10rem;
-// 	}
-
-// 	p {
-// 		color: $color-white-1;
-// 		// font-weight: $font-weight-links;
-// 		text-shadow: $shadow-contrast;
-// 		&.label {
-// 			font-size: $font-size-p3;
-// 			margin-bottom: 0;
-// 		}
-// 	}
-
-// 	.banner--faded {
-// 		// background-color: $banner-color-hero;
-// 		height: 100%;
-// 	}
-
-// 	.banner--text {
-// 		left: $margin-padding-standard;
-// 		position: absolute;
-// 		right: $margin-padding-standard;
-// 		top: 50%;
-// 		font-size: 1.25rem;
-// 	}
-
-// 	&.banner-height--large {
-// 		height: $banner-hero-height;
-		
-// 		@media screen and (min-width:$tablet-break) {
-// 			height: $banner-hero-height-large;
-// 		}
-// 	}
-// }
-
 $banner-gradient: linear-gradient(to right, #7d7e7d 0%,$color-blue 100%) !default;
 $banner-image: "../images/img_preaching.jpg";
-//banner images - move to custom
+
+//banner images - (move to custom!)
 .banner--flex.has-image.banner-image--default {
 	background-image: url($banner-image) !important;
 }
