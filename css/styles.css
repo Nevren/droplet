@@ -1015,6 +1015,12 @@ Actual CSS Grid Classes
   padding: 0px;
   width: 100%; }
 
+/*-----------------
+Navigation Settings
+-----------------*/
+/*--------------
+Navigation Rules
+--------------*/
 .nav {
   background-color: rgba(247, 247, 247, 0.95);
   height: auto;

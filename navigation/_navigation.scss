@@ -1,3 +1,7 @@
+/*-----------------
+Navigation Settings
+-----------------*/
+
 //Navigation Bar Height
 $nav-height: 5rem;
 $sub-nav-height: 3rem;
@@ -13,6 +17,9 @@ $text-color: #333333;//color of the text of the links and nav
 $nav-background-color:  rgba(247,247,247,0.95);//color of the nav bar itself (rgba(247,247,247,0.95)
 $nav-animation-time: background 0.25s ease-in;//for link highlighting or hover (background 0.25s ease-in)
 
+/*--------------
+Navigation Rules
+--------------*/
 .nav {
 	background-color: $nav-background-color;
 	height: auto;
