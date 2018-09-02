@@ -1,7 +1,7 @@
 /* -----------------------------
 Fallback Classes (Must be First)
 -------------------------------- */
-.grid { grid-template-columns: repeat(12, 1fr); 
+.grid { grid-template-columns: repeat(12, 1fr);
 	.grid--1  { @include fallback-grid(8.3333%); }
 	.grid--2  { @include fallback-grid(16.6666%); }
 	.grid--3  { @include fallback-grid(25%); }
@@ -20,31 +20,31 @@ Fallback Classes (Must be First)
 Fake "grid-gap" for Old Browsers
 -------------------------------- */
 .grid {
-	.grid--1, 
-	.grid--2, 
-	.grid--3, 
+	.grid--1,
+	.grid--2,
+	.grid--3,
 	.grid--4,
-	.grid--5, 
-	.grid--6, 
-	.grid--7, 
+	.grid--5,
+	.grid--6,
+	.grid--7,
 	.grid--8,
-	.grid--9, 
-	.grid--10, 
-	.grid--11, 
+	.grid--9,
+	.grid--10,
+	.grid--11,
 	.grid--12 {
 		//Fake grid gap on grid elements
 		margin: $grid-gutter 0;
 		&:first-of-type { margin-top: 0; }
 		&:last-of-type  { margin-bottom: 0; }
 		@media #{$tablet} {
-			margin: calc(#{$grid-gutter} / 2); 
+			margin: calc(#{$grid-gutter} / 2);
 			&:first-of-type {
-				margin: calc(#{$grid-gutter} / 2); 
+				margin: calc(#{$grid-gutter} / 2);
 			}
 			&:last-of-type {
-				margin: calc(#{$grid-gutter} / 2); 
+				margin: calc(#{$grid-gutter} / 2);
 			}
 		}//IE11 and Safari 9
-		@supports(display: grid) { margin: 0; &:first-of-type { margin: 0; } &:last-of-type { margin: 0; } }//Reset for "the right" browsers ; )
+		@supports(display: grid) { margin: 0; &:first-of-type { margin: 0; } &:last-of-type { margin: 0; } }//Reset for "the right" browsers ;)
 	}
 }

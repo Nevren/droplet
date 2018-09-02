@@ -11,7 +11,7 @@
 
 //Place around rows to force them to join with the rest of the page's max width
 .row--constrain, .row--contain {
-	max-width: $content-width;
+	max-width: $global-content-width;
 	margin: $margin-center;
 }
 

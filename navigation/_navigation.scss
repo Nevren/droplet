@@ -5,16 +5,16 @@ Navigation Settings
 //Navigation Bar Height
 $nav-height: 5rem;
 $sub-nav-height: 3rem;
-$border-size: 2px solid;
+$nav-border-size: 5px solid;
 $nav-height-desktop: 2.0rem;//how high is the nav on tablet-desktop? (2.0rem)
 
 //Navigation Link Width
 $nav-link-size: 4rem;//width of links (4rem)
 
 //Navigation Colors
-$nav-color-theme: lighten(#79cdf2, 10%);//color of active and highlighted links (lighten(#79cdf2, 10%)
-$text-color: #333333;//color of the text of the links and nav
-$nav-background-color:  rgba(247,247,247,0.95);//color of the nav bar itself (rgba(247,247,247,0.95)
+$nav-color-theme: $color-white-2;//color of active and highlighted links (lighten(#79cdf2, 10%)
+$nav-text-color: $color-white-2;//color of the text of the links and nav (#333333)
+$nav-background-color:  rgba(34,34,34,0.95);//color of the nav bar itself (rgba(247,247,247,0.95)
 $nav-animation-time: background 0.25s ease-in;//for link highlighting or hover (background 0.25s ease-in)
 
 /*--------------
@@ -32,21 +32,22 @@ Navigation Rules
 		display: flex;
 		align-items: center;
 		margin: auto;
-		max-width: $content-width;
+		max-width: $global-content-width;
 		height: $nav-height;
 		padding: 0 $margin-padding-standard;
 
 		.nav-logo {
-			color: $text-color;
+			font-size: $font-size-p2;
+			color: $nav-text-color;
 			margin: 0;
 
 			@media #{$tablet} {
-				font-size: $font-size-p2;	
+				font-size: $font-size-h3;
 			}
 
 			a {
 				text-decoration: none;
-				color: $text-color;
+				color: $nav-text-color;
 			}
 		}
 
@@ -60,13 +61,9 @@ Navigation Rules
 				display: inline-block;
 				max-height: $nav-height;
 
-				&:hover {
-					background-color: $nav-color-theme;
-				}
-
 				a {
 					text-decoration: none;
-					color: $text-color;
+					color: $nav-text-color;
 					display: block;
 					font-size: 0.9rem;
 					margin:0;
@@ -75,11 +72,13 @@ Navigation Rules
 					padding: $nav-height-desktop $margin-padding-standard;
 					max-height: $nav-height;
 				}
-			}
 
-			.active {
-				border-bottom: $border-size darken($nav-color-theme, 50%);
-				background-color: $nav-color-theme;
+				&.active, &:hover {
+					// background-color: $nav-color-theme;
+					// border-bottom: $nav-border-size darken($nav-color-theme, 50%);
+					border-bottom: $nav-border-size $nav-color-theme;
+					font-weight: bold;
+				}
 			}
 		}
 	}
@@ -141,13 +140,15 @@ Navigation Rules
 			text-align: right;
 
 			&:hover, &:active {
-				background-color: $nav-color-theme;
+				// background-color: $nav-color-theme;
+				border-right: $nav-border-size $nav-color-theme;
 				transition: $nav-animation-time;
 			}
 
 			&.active {
-				background-color: $nav-color-theme;
-				border-right: $border-size darken($nav-color-theme, 50%);
+				// background-color: $nav-color-theme;
+				border-right: $nav-border-size $nav-color-theme;
+				// border-right: $nav-border-size darken($nav-color-theme, 50%);
 			}
 		}
 
@@ -157,61 +158,58 @@ Navigation Rules
 			min-width: $nav-link-size;
 			padding-top: $margin-padding-standard;
 			padding-bottom: $margin-padding-standard;
-			padding-right: $margin-padding-standard; 
+			padding-right: $margin-padding-standard;
 			text-transform: uppercase;
-			color: $text-color;
+			color: $nav-text-color;
 			text-decoration: none;
 		}
 	}
 }
 
-.sub-nav {//For additional links...
-	margin-top: $nav-height;
-	z-index: 4;
-	width: 100%;
-	height: auto;
-	background-color: darken($nav-color-theme, 50%);
-	
-	.flex-wrapper {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin: auto;
-		max-width: $content-width;
-		height: $sub-nav-height;
-		padding: 0 $margin-padding-standard;
-	}
 
-	.desktop-menu--list {
-		display: inline;
+/*--------------
+Subnavigation Above Articles
+--------------*/
+.article-navigation {//added 09/01/18 - for blog/article style pages
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;//For IE
+	margin-left: auto !important;
+	z-index: 1;
+
+	ul {
 		list-style-type: none;
-		margin: 0 0 0 auto;
+		margin: 0;
 		padding: 0;
 
 		li {
 			display: inline-block;
-			max-height: $sub-nav-height;
+			max-height: $nav-height;
+			cursor: pointer;
 
-			&:hover {
-				background-color: $nav-color-theme;
+			&:not(:first-child) {
+				border-left: none;
+				@media #{$tablet} {
+					border-left: 1px solid $color-white-1;
+				}
 			}
 
-			a {
-				text-decoration: none;
-				color: $text-color;
-				display: block;
-				font-size: 0.9rem;
-				margin:0;
-				min-width: $nav-link-size;
-				text-transform: uppercase;
-				padding: $nav-height-desktop/2 $margin-padding-standard;
-				max-height: $sub-nav-height;
+			&.active, &:hover {
+				background-color: $color-red;
 			}
 		}
 
-		.active {
-			border-bottom: $border-size darken($nav-color-theme, 50%);
-			background-color: $nav-color-theme;
+		a {
+			display: block;
+			text-decoration: none;
+			color: $color-white-1;
+			text-shadow: $shadow-contrast;
+			padding: $margin-padding-standard/2 $margin-padding-standard;
+			text-transform: uppercase;
+
+			@media #{$tablet} {
+				padding: $margin-padding-standard/2 $margin-padding-standard;
+			}
 		}
 	}
 }

@@ -1,19 +1,6 @@
 $banner-flex-height: 350px;
 $banner-gradient: linear-gradient(to right, #7d7e7d 0%,$color-blue 100%) !default;
-$banner-image: "../images/img_preaching.jpg";
-
-//banner images - (move to custom!)
-// .banner--flex.has-image.banner-image--default {
-// 	background-image: url($banner-image) !important;
-// }
-
-// .banner-image--about {
-// 	background-image: url("");
-// }
-
-// .banner-image--forms {
-// 	background-image: url("");
-// }
+$banner-image: "../examples/assets/example.jpg";//example
 
 .banner--flex {
 	display: flex;
@@ -22,13 +9,26 @@ $banner-image: "../images/img_preaching.jpg";
 	justify-content: center;
 	overflow: auto;
 	background: $banner-gradient;
+	z-index: 1;
+
+	&.has-article {
+		height: calc(#{$banner-flex-height} + 100px);
+	}
 
 	&.has-image {
+		background-image: url($banner-image);//example
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
 	}
+
 	&.has-overlay {
+		&.has-article {
+			&::before {
+			height: calc(#{$banner-flex-height} + 100px);
+			}
+		}
+
 		&::before {
 			content: "";
 			width: 100%;

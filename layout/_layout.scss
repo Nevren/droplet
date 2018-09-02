@@ -3,7 +3,7 @@
 }
 
 body {
-	font-family: $font-family-1;
+	font-family: $font-family;
 	text-align:center;
 	background-color: $color-white-3;
 	color: $body-color-text;
@@ -14,10 +14,39 @@ body {
 	}
 }
 
-.content {
-	margin-top: 5.375rem !important;
+.app-content {
+	max-width: $global-content-width;
+	&.has-article {
+		margin-top: -11rem;
+	}
+}
 
-	@media #{$tablet} {
-		margin-top: 5.375rem !important;
+.no-banner {
+	margin-top: 5rem !important;//compare with $nav-height: 5rem;
+}
+
+/*--------------
+Article Specific
+--------------*/
+.article {
+	background-color: $white;
+	display: inline-block;
+	padding: 2rem 0;
+	z-index: 1;
+}
+
+.article-width {
+	margin: auto;
+	max-width: $global-blog-width;
+}
+
+.article-header {
+	z-index: 1;
+	h1 {
+		margin: 0;
+		padding-left: $margin-padding-standard;
+		color: $color-white-1;
+		text-shadow: $shadow-contrast;
+		z-index: 1;
 	}
 }

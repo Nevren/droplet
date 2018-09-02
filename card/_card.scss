@@ -1,9 +1,10 @@
 .card {
 	background-color: $white;
 	border: $border-1 $color-grey-1;
-	border-radius: 5px;
+	border-radius: 2px;
 	display: inline-block;
 	padding: $margin-padding-standard;
+	z-index: 1;
 }
 
 .is-link {
@@ -16,5 +17,6 @@
 }
 
 .caption {
+	display: block;
 	font-size: 0.75rem;
 }

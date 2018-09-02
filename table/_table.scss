@@ -2,7 +2,7 @@ $table-padding: 0 0.25rem;
 
 .table, table {
 	margin: $margin-center;
-	max-width: $content-width;
+	max-width: $global-content-width;
 	width: 100%;
 
 	p {

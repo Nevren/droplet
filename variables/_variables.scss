@@ -1,28 +1,58 @@
-//This file contains variables not specific to a component
-$font-family-1: 'Open Sans', sans-serif;//Open Sans
+//----- Fonts -----//
+$font-family: 'Open Sans', sans-serif;//Open Sans - imported in _layout.scss
 
-//-----  Screen Breaks and Settings -----//
+//----- Colors -----//
+//Greyscale
+$color-grey-1: #ccc;//(#cccccc)
+$color-grey-2: #777;//(#777777)
+$color-grey-3: #333;//(#333333)
 
-//Screen Heights
-$mobile-height:  480px;
-$desktop-height: 720px;
+$color-white-1: #ffffff;//(#ffffff)
+$color-white-2: #f7f7f7;//(#f7f7f7)
+$color-white-3: #e2e2e2;//(#e2e2e2)
+$white: #FFFFFF;
 
-//Widths
-$content-width:        1200px !default;
+$color-black-1: #000000;
+$black: #000000;
 
-$content-width-large:  1280px !default;//(1280px)
-$content-width-medium: 1200px !default;//(1200px)
-$content-width-small:  720px !default;//(720px)
+//Main
+$color-primary: #439a86;
+$color-primary-fade: lighten($color-primary, 10%);
+$color-secondary: #9A9A9A;
+$color-secondary-fade: lighten($color-secondary, 10%);
 
-//BreakPoints
+//Other
+$color-purple: #8f4dae;
+$color-purple-fade: lighten($color-purple, 10%);
+$color-blue: #286483;
+$color-blue-fade: lighten($color-blue, 10%);
+$color-green: #33993c;
+$color-green-fade: lighten($color-green, 10%);
+$color-red: #c81d20;//was #ac4f51
+$color-red-fade: lighten($color-red, 10%);
+$color-yellow: #FFFB19;
+$color-yellow-fade: lighten($color-yellow, 10%);
+$color-orange: #FF8C63;
+$color-orange-fade: lighten($color-orange, 10%);
+
+$body-color-text: $color-grey-3;//($color-grey-3)
+
+//-----  Screen Breaks and Widths -----//
+
+//Content and Text Width
+$global-content-width:        1200px !default;//The page stops growing at 1200px
+$global-blog-width:           600px !default;//The max-width of text boxes for improved readability
+
+//Break Points
 $phone:         "all and (max-width: 470px)" !default;
 $tablet:        "all and (min-width: 680px)" !default;
 $desktop:       "all and (min-width: 890px)" !default;
-$tablet-large:  "all and (min-width: 708px)" !default;
-// $desktop-large: "all and (min-width: 96em)" !default;
+
+//Break Point Addons
+$tablet-large:  "all and (min-width: 708px)" !default;//For tables
 
 //-----  Spacing -----//
-$margin-padding-standard: 1rem;//(0.50rem)
+$margin-padding-standard: 1rem;
 $padding-underline: 0.25rem;//Offsets border applied (0.25rem)
 $margin-center: 0 auto;
 
@@ -43,26 +73,11 @@ $border-radius: 2px;
 //----- Grid -----//
 $grid-gutter: 1rem !default;
 
-/*These variables are for changes to various 
-elements that remain constant (such as images/logos/branding) 
+/*These variables are for changes to various
+elements that remain constant (such as images/logos/branding)
 There are many component specific variables in settings.*/
 /*----- BODY -----*///:layout.scss
 $body-margin-top: 0;//height to offset for header ($header-height)
-
-/*----- BANNERS -----*///:banners.scss
-//Hero-Banner
-$banner-hero-height: 275px;//how high is the hero element? (225px)
-$banner-hero-height-large: 550px;//how high is the hero element? (550px)
-$banner-hero-position: center -5rem;//position of image (0 30%)
-$banner-hero-position-tablet: center -6rem;//position of image (0 30%)
-$banner-hero-position-desktop: center -8rem;//position of image on full desktop
-$banner-hero-width: 100%;//how far should the image stretch? (100%)
-$banner-text-height: 45%;//positioning of text on page (33%)
-$banner-attachment: fixed;//fixed or scroll
-
-/*----- SPLASH -----*///:splash.scss - incomplete settings, splash will likely be deprecated.
-$splash-height-mobile: $mobile-height;//($mobile-height)
-$splash-height-tablet: $desktop-height;//($desktop-height)
 
 /*----- GRID -----*///:grid.scss
 $grid-divider-thickness: 5px;//thickness of dividers(5px)
@@ -70,4 +85,19 @@ $grid-image-minimum: 300px;//the minimum size that an image can be in the feed (
 $grid-image-minimum-mobile: 100%;
 
 /*----- FOOTERS -----*///:footer.scss
-$footer-width: $content-width;//($content-width)
+$footer-width: $global-content-width;//($global-content-width)
+
+//----- TTPOGRAPHY -----//
+//Font Sizes
+$font-size-description: 0.9rem;
+$font-size-h1: 3.5rem;
+$font-size-h2: 2.5rem;
+$font-size-h3: 2.0rem;
+$font-size-p1: 1.7rem;
+$font-size-p2: 1.25rem;
+$font-size-p3: 0.75rem;
+
+//Font Weights
+$font-weight-links: bold;
+$font-weight-header: 400;
+$font-weight-logo: 600;

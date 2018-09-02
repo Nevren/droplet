@@ -2,7 +2,7 @@
 Actual CSS Grid Classes
 -------------------------------- */
 .grid-wrapper {
-	max-width: $content-width;
+	// max-width: $global-content-width;
 	margin: auto;
   	width: 100%;
 }
@@ -20,7 +20,7 @@ Actual CSS Grid Classes
 		@supports(display: grid) { @include grid-column(12); }//By default, content will span all 12 columns
 	}
 
-	grid-template-columns: repeat(12, 1fr); 
+	grid-template-columns: repeat(12, 1fr);
 
 	.grid--1  { @include grid-column(1); }
 	.grid--2  { @include grid-column(2); }

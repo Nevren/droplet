@@ -447,12 +447,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/*These variables are for changes to various 
-elements that remain constant (such as images/logos/branding) 
+/*These variables are for changes to various
+elements that remain constant (such as images/logos/branding)
 There are many component specific variables in settings.*/
 /*----- BODY -----*/
-/*----- BANNERS -----*/
-/*----- SPLASH -----*/
 /*----- GRID -----*/
 /*----- FOOTERS -----*/
 * {
@@ -468,11 +466,35 @@ body {
     body {
       margin-top: 0; } }
 
-.content {
-  margin-top: 5.375rem !important; }
-  @media all and (min-width: 680px) {
-    .content {
-      margin-top: 5.375rem !important; } }
+.app-content {
+  max-width: 1200px; }
+  .app-content.has-article {
+    margin-top: -11rem; }
+
+.no-banner {
+  margin-top: 5rem !important; }
+
+/*--------------
+Article Specific
+--------------*/
+.article {
+  background-color: #FFFFFF;
+  display: inline-block;
+  padding: 2rem 0;
+  z-index: 1; }
+
+.article-width {
+  margin: auto;
+  max-width: 600px; }
+
+.article-header {
+  z-index: 1; }
+  .article-header h1 {
+    margin: 0;
+    padding-left: 1rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 2px #000000;
+    z-index: 1; }
 
 /* -----------------------------
 Fallback Classes (Must be First)
@@ -676,7 +698,6 @@ Utilities
 Actual CSS Grid Classes
 -------------------------------- */
 .grid-wrapper {
-  max-width: 1200px;
   margin: auto;
   width: 100%; }
 
@@ -857,9 +878,9 @@ Actual CSS Grid Classes
     .button.button--purple:not(.disabled):hover, .button.button--purple:not(.disabled):focus, button.button--purple:not(.disabled):hover, button.button--purple:not(.disabled):focus {
       background: #a66fbf; }
   .button.button--red, button.button--red {
-    background: #ac4f51; }
+    background: #c81d20; }
     .button.button--red:not(.disabled):hover, .button.button--red:not(.disabled):focus, button.button--red:not(.disabled):hover, button.button--red:not(.disabled):focus {
-      background: #be7072; }
+      background: #e23639; }
   .button.button--white, button.button--white {
     background: #e2e2e2;
     color: #333; }
@@ -925,9 +946,9 @@ Actual CSS Grid Classes
     .link.link--purple:not(.disabled):hover, .link.link--purple:not(.disabled):focus {
       color: #a66fbf; }
   .link.link--red {
-    color: #ac4f51; }
+    color: #c81d20; }
     .link.link--red:not(.disabled):hover, .link.link--red:not(.disabled):focus {
-      color: #be7072; }
+      color: #e23639; }
   .link.link--white {
     color: #e2e2e2; }
     .link.link--white:not(.disabled):hover, .link.link--white:not(.disabled):focus {
@@ -978,9 +999,9 @@ Actual CSS Grid Classes
     .input.input--purple:focus, input.input--purple:focus {
       box-shadow: 0px 0px 10px #8f4dae; }
   .input.input--red, input.input--red {
-    border-color: #ac4f51; }
+    border-color: #c81d20; }
     .input.input--red:focus, input.input--red:focus {
-      box-shadow: 0px 0px 10px #ac4f51; }
+      box-shadow: 0px 0px 10px #c81d20; }
   .input.input--white, input.input--white {
     border-color: #f7f7f7; }
     .input.input--white:focus, input.input--white:focus {
@@ -1022,7 +1043,7 @@ Navigation Settings
 Navigation Rules
 --------------*/
 .nav {
-  background-color: rgba(247, 247, 247, 0.95);
+  background-color: rgba(34, 34, 34, 0.95);
   height: auto;
   position: fixed;
   left: 0px;
@@ -1038,14 +1059,15 @@ Navigation Rules
     height: 5rem;
     padding: 0 1rem; }
     .nav .flex-wrapper .nav-logo {
-      color: #333333;
+      font-size: 1.25rem;
+      color: #f7f7f7;
       margin: 0; }
       @media all and (min-width: 680px) {
         .nav .flex-wrapper .nav-logo {
-          font-size: 1.25rem; } }
+          font-size: 2rem; } }
       .nav .flex-wrapper .nav-logo a {
         text-decoration: none;
-        color: #333333; }
+        color: #f7f7f7; }
     .nav .flex-wrapper .desktop-menu--list {
       display: inline;
       list-style-type: none;
@@ -1054,11 +1076,9 @@ Navigation Rules
       .nav .flex-wrapper .desktop-menu--list li {
         display: inline-block;
         max-height: 5rem; }
-        .nav .flex-wrapper .desktop-menu--list li:hover {
-          background-color: #a7def7; }
         .nav .flex-wrapper .desktop-menu--list li a {
           text-decoration: none;
-          color: #333333;
+          color: #f7f7f7;
           display: block;
           font-size: 0.9rem;
           margin: 0;
@@ -1066,18 +1086,18 @@ Navigation Rules
           text-transform: uppercase;
           padding: 2rem 1rem;
           max-height: 5rem; }
-      .nav .flex-wrapper .desktop-menu--list .active {
-        border-bottom: 2px solid #0e6991;
-        background-color: #a7def7; }
+        .nav .flex-wrapper .desktop-menu--list li.active, .nav .flex-wrapper .desktop-menu--list li:hover {
+          border-bottom: 5px solid #f7f7f7;
+          font-weight: bold; }
   .nav .mobile-menu--bars {
     display: inline-block;
     margin: 0 0 0 auto; }
     .nav .mobile-menu--bars i {
       padding: 1rem;
       border-radius: 2px;
-      background-color: #a7def7; }
+      background-color: #f7f7f7; }
       .nav .mobile-menu--bars i:hover {
-        background-color: #79cdf2;
+        background-color: #dedede;
         transition: background 0.25s ease-in; }
   .nav .mobile-menu--label {
     cursor: pointer; }
@@ -1094,7 +1114,7 @@ Navigation Rules
     top: 5rem;
     right: 0;
     left: 0;
-    background-color: rgba(247, 247, 247, 0.95); }
+    background-color: rgba(34, 34, 34, 0.95); }
     .nav #toggle:checked ~ #mobile-menu--full * {
       display: block; }
   .nav .mobile-menu--list {
@@ -1109,11 +1129,10 @@ Navigation Rules
     .nav .mobile-menu--list li {
       text-align: right; }
       .nav .mobile-menu--list li:hover, .nav .mobile-menu--list li:active {
-        background-color: #a7def7;
+        border-right: 5px solid #f7f7f7;
         transition: background 0.25s ease-in; }
       .nav .mobile-menu--list li.active {
-        background-color: #a7def7;
-        border-right: 2px solid #0e6991; }
+        border-right: 5px solid #f7f7f7; }
     .nav .mobile-menu--list a {
       display: block;
       font-size: 0.9rem;
@@ -1122,46 +1141,43 @@ Navigation Rules
       padding-bottom: 1rem;
       padding-right: 1rem;
       text-transform: uppercase;
-      color: #333333;
+      color: #f7f7f7;
       text-decoration: none; }
 
-.sub-nav {
-  margin-top: 5rem;
-  z-index: 4;
-  width: 100%;
-  height: auto;
-  background-color: #0e6991; }
-  .sub-nav .flex-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    max-width: 1200px;
-    height: 3rem;
-    padding: 0 1rem; }
-  .sub-nav .desktop-menu--list {
-    display: inline;
+/*--------------
+Subnavigation Above Articles
+--------------*/
+.article-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto !important;
+  z-index: 1; }
+  .article-navigation ul {
     list-style-type: none;
-    margin: 0 0 0 auto;
+    margin: 0;
     padding: 0; }
-    .sub-nav .desktop-menu--list li {
+    .article-navigation ul li {
       display: inline-block;
-      max-height: 3rem; }
-      .sub-nav .desktop-menu--list li:hover {
-        background-color: #a7def7; }
-      .sub-nav .desktop-menu--list li a {
-        text-decoration: none;
-        color: #333333;
-        display: block;
-        font-size: 0.9rem;
-        margin: 0;
-        min-width: 4rem;
-        text-transform: uppercase;
-        padding: 1rem 1rem;
-        max-height: 3rem; }
-    .sub-nav .desktop-menu--list .active {
-      border-bottom: 2px solid #0e6991;
-      background-color: #a7def7; }
+      max-height: 5rem;
+      cursor: pointer; }
+      .article-navigation ul li:not(:first-child) {
+        border-left: none; }
+        @media all and (min-width: 680px) {
+          .article-navigation ul li:not(:first-child) {
+            border-left: 1px solid #ffffff; } }
+      .article-navigation ul li.active, .article-navigation ul li:hover {
+        background-color: #c81d20; }
+    .article-navigation ul a {
+      display: block;
+      text-decoration: none;
+      color: #ffffff;
+      text-shadow: 2px 2px 2px #000000;
+      padding: 0.5rem 1rem;
+      text-transform: uppercase; }
+      @media all and (min-width: 680px) {
+        .article-navigation ul a {
+          padding: 0.5rem 1rem; } }
 
 .banner--flex {
   display: flex;
@@ -1169,11 +1185,17 @@ Navigation Rules
   align-items: center;
   justify-content: center;
   overflow: auto;
-  background: linear-gradient(to right, #7d7e7d 0%, #286483 100%); }
+  background: linear-gradient(to right, #7d7e7d 0%, #286483 100%);
+  z-index: 1; }
+  .banner--flex.has-article {
+    height: calc(350px + 100px); }
   .banner--flex.has-image {
+    background-image: url("../examples/assets/example.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; }
+  .banner--flex.has-overlay.has-article::before {
+    height: calc(350px + 100px); }
   .banner--flex.has-overlay::before {
     content: "";
     width: 100%;
@@ -1398,11 +1420,11 @@ Navigation Rules
     background: #8f4dae; }
 
 .table-color--red {
-  border-color: #ac4f51; }
+  border-color: #c81d20; }
   .table-color--red .table-column:not(:first-child) {
-    background-color: #be7072; }
+    background-color: #e23639; }
   .table-color--red .table-column:first-child {
-    background: #ac4f51; }
+    background: #c81d20; }
 
 .table-color--yellow {
   border-color: #FFFB19; }
@@ -1433,7 +1455,8 @@ Navigation Rules
   text-align: center; }
   .footer--links li {
     display: inline-block;
-    max-height: 5rem; }
+    max-height: 5rem;
+    cursor: pointer; }
     .footer--links li:not(:first-child) {
       border-left: 1px solid #ffffff; }
     .footer--links li.active, .footer--links li:hover {
@@ -1447,9 +1470,10 @@ Navigation Rules
 .card {
   background-color: #FFFFFF;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 2px;
   display: inline-block;
-  padding: 1rem; }
+  padding: 1rem;
+  z-index: 1; }
 
 .is-link:hover {
   border-radius: 0px;
@@ -1458,6 +1482,7 @@ Navigation Rules
   border-color: #33993c; }
 
 .caption {
+  display: block;
   font-size: 0.75rem; }
 
 .hidden {
@@ -1568,9 +1593,9 @@ Navigation Rules
     color: #a66fbf; }
 
 .text--red {
-  color: #ac4f51; }
+  color: #c81d20; }
   .text--reda:hover {
-    color: #be7072; }
+    color: #e23639; }
 
 .text--white {
   color: #f7f7f7; }
@@ -1617,5 +1642,8 @@ Navigation Rules
 
 .relative {
   position: relative; }
+
+.blog-text {
+  max-width: 600px; }
 
 /*# sourceMappingURL=styles.css.map */

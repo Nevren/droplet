@@ -94,6 +94,6 @@
 .no-margin--top    { margin-top:    0; }
 .no-margin--bottom { margin-bottom: 0; }
 
-.relative {
-	position: relative;
-}
+.relative { position: relative; }
+
+.blog-text{ max-width: $global-blog-width; }
