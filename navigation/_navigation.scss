@@ -71,13 +71,14 @@ Navigation Rules
 					text-transform: uppercase;
 					padding: $nav-height-desktop $margin-padding-standard;
 					max-height: $nav-height;
-				}
 
-				&.active, &:hover {
-					// background-color: $nav-color-theme;
-					// border-bottom: $nav-border-size darken($nav-color-theme, 50%);
-					border-bottom: $nav-border-size $nav-color-theme;
-					font-weight: bold;
+					&.active, &:hover {
+						// background-color: $nav-color-theme;
+						// border-bottom: $nav-border-size darken($nav-color-theme, 50%);
+						border-bottom: $nav-border-size $nav-color-theme;
+						font-weight: bold;
+					}
+
 				}
 			}
 		}
@@ -138,6 +139,9 @@ Navigation Rules
 
 		li {
 			text-align: right;
+		}
+
+		a {
 
 			&:hover, &:active {
 				// background-color: $nav-color-theme;
@@ -150,9 +154,7 @@ Navigation Rules
 				border-right: $nav-border-size $nav-color-theme;
 				// border-right: $nav-border-size darken($nav-color-theme, 50%);
 			}
-		}
 
-		a {
 			display: block;
 			font-size: 0.9rem;
 			min-width: $nav-link-size;

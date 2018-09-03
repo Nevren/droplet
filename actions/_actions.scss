@@ -1,4 +1,34 @@
 $button-padding: calc(#{$margin-padding-standard} / 2);
+//TODO: simplify these mixins, they could be optimized much better.
+
+@mixin input-styles() {
+	background-color: $color-white-2;
+	border-radius: $border-radius;
+	border: $border-2 $color-primary;
+	border-color: $color-grey-1;
+	color: $color-grey-3;
+	min-width: 25px;
+	width: 100%;
+	margin-bottom: calc(#{$margin-padding-standard} / 2);
+}
+
+// @mixin input-focus-color($color) {
+// 	&:not(.disabled):focus { border-color: $color1; };
+// }
+
+@mixin input-focus() {
+	&:not(.disabled):focus { border-color: $color-primary; }
+	&.input--black   { &:not(.disabled):focus { border-color: $color-black-1; } }
+	&.input--blue    { &:not(.disabled):focus { border-color: $color-blue; } }
+	&.input--green   { &:not(.disabled):focus { border-color: $color-green; } }
+	&.input--grey    { &:not(.disabled):focus { border-color: $color-grey-3; } }
+	&.input--orange  { &:not(.disabled):focus { border-color: $color-orange; } }
+	&.input--primary { &:not(.disabled):focus { border-color: $color-primary; } }
+	&.input--purple  { &:not(.disabled):focus { border-color: $color-purple; } }
+	&.input--red   	 { &:not(.disabled):focus { border-color: $color-red; } }
+	&.input--white   { &:not(.disabled):focus { border-color: $color-white-2; } }
+	&.input--yellow  { &:not(.disabled):focus { border-color: $color-yellow; } }
+}
 
 .button, button {
 	background: $color-primary;
@@ -32,7 +62,7 @@ $button-padding: calc(#{$margin-padding-standard} / 2);
 	&.button--primary { background: $color-primary; &:not(.disabled):hover, &:not(.disabled):focus { background: $color-primary-fade; } }
 	&.button--purple  { background: $color-purple;  &:not(.disabled):hover, &:not(.disabled):focus { background: $color-purple-fade;  } }
 	&.button--red     { background: $color-red;     &:not(.disabled):hover, &:not(.disabled):focus { background: $color-red-fade;     } }
-	&.button--white   { background: $color-white-3; 
+	&.button--white   { background: $color-white-3;
 						color: $color-grey-3;   	&:not(.disabled):hover, &:not(.disabled):focus { background: $color-white-1;      } }
 	&.button--yellow  { background: $color-yellow;  &:not(.disabled):hover, &:not(.disabled):focus { background: $color-yellow-fade;  } }
 
@@ -42,10 +72,10 @@ $button-padding: calc(#{$margin-padding-standard} / 2);
 		order: 2;
 		flex: 1 1 auto;
 		align-self: auto;
-		margin: 0.5rem 0;
+		height: 2.5rem;
 	}
 
-	&.button--to-top {
+	&.button--to-top {//This perhaps should be a custom css rule, this is a very special case.
 		position: fixed;
 		bottom: 0.5rem;
 		right: 1rem;
@@ -81,30 +111,12 @@ $button-padding: calc(#{$margin-padding-standard} / 2);
 }
 
 .input, input {
-	background-color: $color-white-2;
-	border-radius: $border-radius;
-	border: $border-1 $color-primary;
-	color: $color-grey-3;
-	display: inline-block;
-	margin-top: $margin-padding-standard;
-	min-width: 25px;//This could potentially change
-	padding: $margin-padding-standard calc(#{$margin-padding-standard} * 2);
-	width: 100%;//This could potentially change
+	@include input-styles();
+	@include input-focus();
+	height: 2.5rem;
+	padding: 0 calc(#{$margin-padding-standard} / 2);
 
-	&:focus { box-shadow: $shadow-input $color-primary; }
-
-	&.input--black   { border-color: $color-black-1; &:focus { box-shadow: $shadow-input $color-black-1; } }
-	&.input--blue    { border-color: $color-blue;    &:focus { box-shadow: $shadow-input $color-blue; } }
-	&.input--green   { border-color: $color-green;   &:focus { box-shadow: $shadow-input $color-green; } }
-	&.input--grey    { border-color: $color-grey-3;  &:focus { box-shadow: $shadow-input $color-grey-3; } }
-	&.input--orange  { border-color: $color-orange;  &:focus { box-shadow: $shadow-input $color-orange; } }
-	&.input--primary { border-color: $color-primary; &:focus { box-shadow: $shadow-input $color-primary; } }
-	&.input--purple  { border-color: $color-purple;  &:focus { box-shadow: $shadow-input $color-purple; } }
-	&.input--red   	 { border-color: $color-red;     &:focus { box-shadow: $shadow-input $color-red; } }
-	&.input--white   { border-color: $color-white-2; &:focus { box-shadow: $shadow-input $color-white-2; } }
-	&.input--yellow  { border-color: $color-yellow;  &:focus { box-shadow: $shadow-input $color-yellow; } }
-
-	&.disabled { opacity: 0.25; &:focus { box-shadow: 0 0 0 0 !important; } }
+	&.disabled, &:disabled { opacity: 0.25; background-color: $color-grey-1; border-color: $color-grey-1; }
 
 	&.input--submit {//use with &.button-submit while in fieldset--submit
 		border-bottom-right-radius: 0;
@@ -112,13 +124,23 @@ $button-padding: calc(#{$margin-padding-standard} / 2);
 		order: 1;
 		flex: 5 1 auto;
 		align-self: auto;
-		margin: 0.5rem 0;
-
 	}
 }
 
+textarea {
+	@include input-styles();
+	@include input-focus();
+	display: block;
+	padding: calc(#{$margin-padding-standard} / 2);
+	width: 100% !important;
+}
+
 .input--label {
-	font-size: 0.9rem;
+	display: inline-block;
+	font-size: 0.8rem;
+	text-align: left;
+	font-weight: bold;
+	margin-bottom: 0.5rem;
 }
 
 .fieldset--submit {

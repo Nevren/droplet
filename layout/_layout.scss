@@ -42,6 +42,11 @@ Article Specific
 
 .article-header {
 	z-index: 1;
+	display: flex;
+	align-items: center;
+	margin-right: auto;
+	justify-content: flex-start;
+
 	h1 {
 		margin: 0;
 		padding-left: $margin-padding-standard;
