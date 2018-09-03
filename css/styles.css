@@ -1213,7 +1213,6 @@ Subnavigation Above Articles
   .banner--flex.has-article {
     height: calc(350px + 100px); }
   .banner--flex.has-image {
-    background-image: url("../examples/assets/example2.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; }

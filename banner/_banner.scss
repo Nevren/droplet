@@ -1,6 +1,6 @@
 $banner-flex-height: 350px;
 $banner-gradient: linear-gradient(to right, #7d7e7d 0%,$color-blue 100%) !default;
-$banner-image: "../examples/assets/example2.jpg";//example
+// $banner-image: "../examples/assets/example2.jpg";//example
 
 .banner--flex {
 	display: flex;
@@ -16,7 +16,7 @@ $banner-image: "../examples/assets/example2.jpg";//example
 	}
 
 	&.has-image {
-		background-image: url($banner-image);//example
+		// background-image: url($banner-image);//example
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
