@@ -1,6 +1,6 @@
 {
   "name": "droplet-css",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A project for exploring and learning scss.",
   "main": "index.js",
   "directories": {
