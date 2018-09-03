@@ -1,0 +1,22 @@
+{
+  "name": "droplet",
+  "version": "0.0.1",
+  "description": "A project for exploring and learning scss.",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nevren/droplet.git"
+  },
+  "author": "Nevren",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nevren/droplet/issues"
+  },
+  "homepage": "https://github.com/Nevren/droplet#readme"
+}
