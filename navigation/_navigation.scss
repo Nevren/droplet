@@ -71,11 +71,17 @@ Navigation Rules
 					text-transform: uppercase;
 					padding: $nav-height-desktop $margin-padding-standard;
 					max-height: $nav-height;
+					opacity: 0.9;
 
 					&.active, &:hover {
 						// background-color: $nav-color-theme;
 						// border-bottom: $nav-border-size darken($nav-color-theme, 50%);
 						border-bottom: $nav-border-size $nav-color-theme;
+						// font-weight: bold;
+						opacity: 1.0;
+					}
+
+					&.active {
 						font-weight: bold;
 					}
 
