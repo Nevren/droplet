@@ -500,6 +500,120 @@ Article Specific
     text-shadow: 2px 2px 2px #000000;
     z-index: 1; }
 
+.grid .grid--1,
+.grid .grid--2,
+.grid .grid--3,
+.grid .grid--4,
+.grid .grid--5,
+.grid .grid--6,
+.grid .grid--7,
+.grid .grid--8,
+.grid .grid--9,
+.grid .grid--10,
+.grid .grid--11,
+.grid .grid--12 {
+  margin: 1rem 0; }
+  .grid .grid--1:first-of-type,
+  .grid .grid--2:first-of-type,
+  .grid .grid--3:first-of-type,
+  .grid .grid--4:first-of-type,
+  .grid .grid--5:first-of-type,
+  .grid .grid--6:first-of-type,
+  .grid .grid--7:first-of-type,
+  .grid .grid--8:first-of-type,
+  .grid .grid--9:first-of-type,
+  .grid .grid--10:first-of-type,
+  .grid .grid--11:first-of-type,
+  .grid .grid--12:first-of-type, .grid .grid--1:last-of-type,
+  .grid .grid--2:last-of-type,
+  .grid .grid--3:last-of-type,
+  .grid .grid--4:last-of-type,
+  .grid .grid--5:last-of-type,
+  .grid .grid--6:last-of-type,
+  .grid .grid--7:last-of-type,
+  .grid .grid--8:last-of-type,
+  .grid .grid--9:last-of-type,
+  .grid .grid--10:last-of-type,
+  .grid .grid--11:last-of-type,
+  .grid .grid--12:last-of-type {
+    margin-top: 0; }
+  @media all and (min-width: 680px) {
+    .grid .grid--1,
+    .grid .grid--2,
+    .grid .grid--3,
+    .grid .grid--4,
+    .grid .grid--5,
+    .grid .grid--6,
+    .grid .grid--7,
+    .grid .grid--8,
+    .grid .grid--9,
+    .grid .grid--10,
+    .grid .grid--11,
+    .grid .grid--12 {
+      margin: calc(1rem / 2); }
+      .grid .grid--1:first-of-type,
+      .grid .grid--2:first-of-type,
+      .grid .grid--3:first-of-type,
+      .grid .grid--4:first-of-type,
+      .grid .grid--5:first-of-type,
+      .grid .grid--6:first-of-type,
+      .grid .grid--7:first-of-type,
+      .grid .grid--8:first-of-type,
+      .grid .grid--9:first-of-type,
+      .grid .grid--10:first-of-type,
+      .grid .grid--11:first-of-type,
+      .grid .grid--12:first-of-type, .grid .grid--1:last-of-type,
+      .grid .grid--2:last-of-type,
+      .grid .grid--3:last-of-type,
+      .grid .grid--4:last-of-type,
+      .grid .grid--5:last-of-type,
+      .grid .grid--6:last-of-type,
+      .grid .grid--7:last-of-type,
+      .grid .grid--8:last-of-type,
+      .grid .grid--9:last-of-type,
+      .grid .grid--10:last-of-type,
+      .grid .grid--11:last-of-type,
+      .grid .grid--12:last-of-type {
+        margin: calc(1rem / 2); } }
+  @supports (display: grid) {
+    .grid .grid--1,
+    .grid .grid--2,
+    .grid .grid--3,
+    .grid .grid--4,
+    .grid .grid--5,
+    .grid .grid--6,
+    .grid .grid--7,
+    .grid .grid--8,
+    .grid .grid--9,
+    .grid .grid--10,
+    .grid .grid--11,
+    .grid .grid--12 {
+      margin: 0; }
+      .grid .grid--1:first-of-type,
+      .grid .grid--2:first-of-type,
+      .grid .grid--3:first-of-type,
+      .grid .grid--4:first-of-type,
+      .grid .grid--5:first-of-type,
+      .grid .grid--6:first-of-type,
+      .grid .grid--7:first-of-type,
+      .grid .grid--8:first-of-type,
+      .grid .grid--9:first-of-type,
+      .grid .grid--10:first-of-type,
+      .grid .grid--11:first-of-type,
+      .grid .grid--12:first-of-type, .grid .grid--1:last-of-type,
+      .grid .grid--2:last-of-type,
+      .grid .grid--3:last-of-type,
+      .grid .grid--4:last-of-type,
+      .grid .grid--5:last-of-type,
+      .grid .grid--6:last-of-type,
+      .grid .grid--7:last-of-type,
+      .grid .grid--8:last-of-type,
+      .grid .grid--9:last-of-type,
+      .grid .grid--10:last-of-type,
+      .grid .grid--11:last-of-type,
+      .grid .grid--12:last-of-type {
+        margin: 0; } }
+
 /* -----------------------------
 Fallback Classes (Must be First)
 -------------------------------- */
@@ -553,130 +667,13 @@ Fallback Classes (Must be First)
     .grid .grid--12 {
       width: calc(100% - 1rem);
       float: left; } }
+  .grid > * {
+    float: left;
+    width: 100%; }
 
 /* -----------------------------
 Fake "grid-gap" for Old Browsers
 -------------------------------- */
-.grid .grid--1,
-.grid .grid--2,
-.grid .grid--3,
-.grid .grid--4,
-.grid .grid--5,
-.grid .grid--6,
-.grid .grid--7,
-.grid .grid--8,
-.grid .grid--9,
-.grid .grid--10,
-.grid .grid--11,
-.grid .grid--12 {
-  margin: 1rem 0; }
-  .grid .grid--1:first-of-type,
-  .grid .grid--2:first-of-type,
-  .grid .grid--3:first-of-type,
-  .grid .grid--4:first-of-type,
-  .grid .grid--5:first-of-type,
-  .grid .grid--6:first-of-type,
-  .grid .grid--7:first-of-type,
-  .grid .grid--8:first-of-type,
-  .grid .grid--9:first-of-type,
-  .grid .grid--10:first-of-type,
-  .grid .grid--11:first-of-type,
-  .grid .grid--12:first-of-type {
-    margin-top: 0; }
-  .grid .grid--1:last-of-type,
-  .grid .grid--2:last-of-type,
-  .grid .grid--3:last-of-type,
-  .grid .grid--4:last-of-type,
-  .grid .grid--5:last-of-type,
-  .grid .grid--6:last-of-type,
-  .grid .grid--7:last-of-type,
-  .grid .grid--8:last-of-type,
-  .grid .grid--9:last-of-type,
-  .grid .grid--10:last-of-type,
-  .grid .grid--11:last-of-type,
-  .grid .grid--12:last-of-type {
-    margin-bottom: 0; }
-  @media all and (min-width: 680px) {
-    .grid .grid--1,
-    .grid .grid--2,
-    .grid .grid--3,
-    .grid .grid--4,
-    .grid .grid--5,
-    .grid .grid--6,
-    .grid .grid--7,
-    .grid .grid--8,
-    .grid .grid--9,
-    .grid .grid--10,
-    .grid .grid--11,
-    .grid .grid--12 {
-      margin: calc(1rem / 2); }
-      .grid .grid--1:first-of-type,
-      .grid .grid--2:first-of-type,
-      .grid .grid--3:first-of-type,
-      .grid .grid--4:first-of-type,
-      .grid .grid--5:first-of-type,
-      .grid .grid--6:first-of-type,
-      .grid .grid--7:first-of-type,
-      .grid .grid--8:first-of-type,
-      .grid .grid--9:first-of-type,
-      .grid .grid--10:first-of-type,
-      .grid .grid--11:first-of-type,
-      .grid .grid--12:first-of-type {
-        margin: calc(1rem / 2); }
-      .grid .grid--1:last-of-type,
-      .grid .grid--2:last-of-type,
-      .grid .grid--3:last-of-type,
-      .grid .grid--4:last-of-type,
-      .grid .grid--5:last-of-type,
-      .grid .grid--6:last-of-type,
-      .grid .grid--7:last-of-type,
-      .grid .grid--8:last-of-type,
-      .grid .grid--9:last-of-type,
-      .grid .grid--10:last-of-type,
-      .grid .grid--11:last-of-type,
-      .grid .grid--12:last-of-type {
-        margin: calc(1rem / 2); } }
-  @supports (display: grid) {
-    .grid .grid--1,
-    .grid .grid--2,
-    .grid .grid--3,
-    .grid .grid--4,
-    .grid .grid--5,
-    .grid .grid--6,
-    .grid .grid--7,
-    .grid .grid--8,
-    .grid .grid--9,
-    .grid .grid--10,
-    .grid .grid--11,
-    .grid .grid--12 {
-      margin: 0; }
-      .grid .grid--1:first-of-type,
-      .grid .grid--2:first-of-type,
-      .grid .grid--3:first-of-type,
-      .grid .grid--4:first-of-type,
-      .grid .grid--5:first-of-type,
-      .grid .grid--6:first-of-type,
-      .grid .grid--7:first-of-type,
-      .grid .grid--8:first-of-type,
-      .grid .grid--9:first-of-type,
-      .grid .grid--10:first-of-type,
-      .grid .grid--11:first-of-type,
-      .grid .grid--12:first-of-type {
-        margin: 0; }
-      .grid .grid--1:last-of-type,
-      .grid .grid--2:last-of-type,
-      .grid .grid--3:last-of-type,
-      .grid .grid--4:last-of-type,
-      .grid .grid--5:last-of-type,
-      .grid .grid--6:last-of-type,
-      .grid .grid--7:last-of-type,
-      .grid .grid--8:last-of-type,
-      .grid .grid--9:last-of-type,
-      .grid .grid--10:last-of-type,
-      .grid .grid--11:last-of-type,
-      .grid .grid--12:last-of-type {
-        margin: 0; } }
-
 /* -----------------------------
 Utilities
 -------------------------------- */
@@ -720,7 +717,8 @@ Actual CSS Grid Classes
       grid-gap: 1rem; } }
   @supports (display: grid) {
     .grid * {
-      grid-column: 1 / -1; }
+      grid-column: 1 / -1;
+      width: auto; }
       @media all and (min-width: 680px) {
         .grid * {
           grid-column: span 12; }
