@@ -4,7 +4,6 @@
 
 body {
 	font-family: $font-family;
-	text-align:center;
 	background-color: $color-white-3;
 	color: $body-color-text;
 	margin-top: $body-margin-top;
@@ -21,8 +20,20 @@ body {
 	}
 }
 
-.no-banner {
-	margin-top: 5rem !important;//compare with $nav-height: 5rem;
+.content {
+  z-index: 0;
+  max-width: $global-content-width;
+  margin: auto;
+  margin-top: $header-height;
+  -webkit-overflow-scrolling: touch;
+
+	&.has-banner {
+		margin-top: 0;
+	}
+
+	&.has-article {
+		margin-top: -11rem;
+	}
 }
 
 /*--------------

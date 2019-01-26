@@ -31,7 +31,7 @@
 
 	li {
 		display: inline-block;
-		max-height: $nav-height;
+		max-height: $header-height;
 		cursor: pointer;
 
 		&:not(:first-child) {

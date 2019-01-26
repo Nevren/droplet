@@ -40,3 +40,7 @@ Fake "grid-gap" for Old Browsers
 		@extend %fallback-gap;
 	}
 }
+
+.grid-padding {
+	@extend %fallback-padding;
+}

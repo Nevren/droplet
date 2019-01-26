@@ -5,48 +5,20 @@
    <link rel="stylesheet" type="text/css" href="../../css/styles.css">
 </head>
 <body>
-  <nav class='nav'>
-    <div class='flex-wrapper'>
-      <span class='nav-logo'><a href="../">Droplet NavBar</a></span>
-      <ul class='hidden--mobile desktop-menu--list'>
-        <li>
-          <a href="../">Home</a>
-        </li>
-				<li>
-					<a href="#">Link 2</a>
-				</li>
-				<li>
-					<a class="active" href="#">Forms</a>
-				</li>
-      </ul>
+	<header class="header">
+			<span class='header-logo'><a href="#">Droplet NavBar</a></span>
 
-      <section class='mobile-menu--bars hidden--tablet hidden--desktop'>
+			<nav class="header-nav hidden--mobile">
+				<ul>
+					<li><a href="../">Home</a></li>
+					<li><a href="../blog">Articles</a></li>
+					<li><a href="./" class="active">Forms</a></li>
+				</ul>
+			</nav>
 
-        <input id='toggle' type='checkbox' class='hidden'>
-        <label for='toggle' class='mobile-menu--label'><i class='fa fa-bars'>&#9776;</i></label>
+	</header>
 
-        <div id='mobile-menu--full' class='mobile-menu--content'>
-          <div class='mobile-menu--overflow align--center'>
-            <ul class='mobile-menu--list'>
-              <li>
-                <a href="../">Home</a>
-              </li>
-      				<li>
-      					<a href="#">Link 2</a>
-      				</li>
-      				<li>
-      					<a class="active" href="#">Forms</a>
-      				</li>
-            </ul>
-          </div>
-        </div>
-
-      </section>
-
-    </div>
-  </nav>
-
-	<section class="grid-wrapper app-content no-banner">
+	<main class="content">
 		<div class="grid grid-padding">
 
       <div class="grid grid--4">
@@ -55,7 +27,7 @@
           <h1>Information Might Be Helpful!</h1>
           <p>We don't really want your e-mail address, but if we did we might ask for it here. You won't receive anything if you give it to us. But you you might as well try with a fake one, yeah?</p>
 
-          <div class="align--left" id="Submission">
+          <div id="Submission">
             <label class="input--label" for="input-4">E-mail (disabled)</label>
             <fieldset class="fieldset--submit">
               <input id="input-3" class="input input--primary input--submit disabled" type="email" name="Cat Name" placeholder="email address" disabled>
@@ -63,7 +35,7 @@
             </fieldset>
           </div>
 
-          <div class="align--left" id="Submission">
+          <div id="Submission">
             <label class="input--label" for="input-4">Name</label>
             <fieldset class="fieldset--submit">
               <input id="input-4" class="input input--blue input--submit" type="text" name="Cat Name" placeholder="your name">
@@ -80,13 +52,13 @@
           <h1>Information Might Be Helpful!</h1>
           <p>We don't really want your e-mail address, but if we did we might ask for it here. You won't receive anything if you give it to us. But you you might as well try with a fake one, yeah?</p>
 
-          <div class="align--left" id="Submission">
+          <div id="Submission">
             <label class="input--label" for="input-4">E-mail</label>
             <input id="input-3" class="input input--primary" type="email" name="Cat Name" placeholder="email address">
             <button id="submit-3" class="button button--primary">Submit</button>
           </div>
 
-          <div class="align--left" id="Submission">
+          <div id="Submission">
             <label class="input--label" for="input-1">Name</label>
             <input id="input-1" class="input input--blue" type="text" name="Cat Name" placeholder="your name">
             <button id="submit-1" class="button button--green no-margin">Submit</button>
@@ -101,7 +73,7 @@
           <h1>Information Might Be Helpful!</h1>
           <p>We don't really want your e-mail address, but if we did we might ask for it here. You won't receive anything if you give it to us. But you you might as well try with a fake one, yeah?</p>
 
-          <div class="align--left" id="Submission">
+          <div id="Submission">
             <label class="input--label" for="input-4">Text Area</label>
             <textarea id="input-3" class="input--blue" type="text" name="Cat Name" placeholder="messsage"></textarea>
             <button id="submit-3" class="button button--primary">Send Message</button>
@@ -119,7 +91,7 @@
           <h1>Contact Us</h1>
           <p>This is an example of how you might contact us. Try it, it doesn't work!</p>
 
-          <div class="align--left" id="Submission">
+          <div id="Submission">
             <label class="input--label" for="email">Email Address</label>
             <input id="email" class="input input--blue" type="email" name="Email" placeholder="email address" required>
 
@@ -136,7 +108,7 @@
         </form>
       </div>
     </div>
-	</section>
+	</main>
 
 	<footer class='footer'>
 		<div class='grid grid-padding grid-wrapper'>
@@ -155,7 +127,7 @@
 				</div>
 			</div>
 			<div class='grid--12'>
-				<p class='footer--copyright'>&copy; Droplet 2016-2018</p>
+				<p class='footer--copyright'>&copy; Droplet 2016-2019</p>
 			</div>
 		</div>
 	</footer>

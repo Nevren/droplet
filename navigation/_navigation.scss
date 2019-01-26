@@ -1,179 +1,81 @@
-/*-----------------
-Navigation Settings
------------------*/
-
-//Navigation Bar Height
-$nav-height: 5rem;
-$sub-nav-height: 3rem;
-$nav-border-size: 5px solid;
-$nav-height-desktop: 2.0rem;//how high is the nav on tablet-desktop? (2.0rem)
-
-//Navigation Link Width
-$nav-link-size: 4rem;//width of links (4rem)
-
-//Navigation Colors
-$nav-color-theme: $color-white-2;//color of active and highlighted links (lighten(#79cdf2, 10%)
-$nav-text-color: $color-white-2;//color of the text of the links and nav (#333333)
-$nav-background-color:  rgba(34,34,34,0.95);//color of the nav bar itself (rgba(247,247,247,0.95)
-$nav-animation-time: background 0.25s ease-in;//for link highlighting or hover (background 0.25s ease-in)
-
 /*--------------
 Navigation Rules
 --------------*/
-.nav {
-	background-color: $nav-background-color;
-	height: auto;
-	position: fixed;
-	left: 0px; right: 0px; top: 0px;
+.header {
+	z-index: 2;
+  display: flex;
+  align-items: center;
+  padding: 0 $margin-padding-standard;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $header-height;
+  max-height: $header-height;
+  max-width: $global-content-width;
+  margin: auto;
+
 	width: 100%;
-	z-index: 5;
 
-	.flex-wrapper {
-		display: flex;
-		align-items: center;
-		margin: auto;
-		max-width: $global-content-width;
-		height: $nav-height;
-		padding: 0 $margin-padding-standard;
+	&::after {
+    z-index: -1;
+  	content: "";
+  	width: 100%;
+  	height: $header-height;
+    background: $nav-background-color;
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+	}
 
-		.nav-logo {
-			font-size: $font-size-p2;
+	.header-logo {
 			color: $nav-text-color;
 			margin: 0;
 
-			@media #{$tablet} {
-				font-size: $font-size-h3;
-			}
-
 			a {
+				font-size: $nav-logo-font-size;
+				font-weight: bold;
 				text-decoration: none;
 				color: $nav-text-color;
+				white-space: nowrap;
 			}
 		}
 
-		.desktop-menu--list {
-			display: inline;
-			list-style-type: none;
-			margin: 0 0 0 auto;
-			padding: 0;
-
-			li {
-				display: inline-block;
-				max-height: $nav-height;
-
-				a {
-					text-decoration: none;
-					color: $nav-text-color;
-					display: block;
-					font-size: 0.9rem;
-					margin:0;
-					min-width: $nav-link-size;
-					text-transform: uppercase;
-					padding: $nav-height-desktop $margin-padding-standard;
-					max-height: $nav-height;
-					opacity: 0.9;
-
-					&.active, &:hover {
-						// background-color: $nav-color-theme;
-						// border-bottom: $nav-border-size darken($nav-color-theme, 50%);
-						border-bottom: $nav-border-size $nav-color-theme;
-						// font-weight: bold;
-						opacity: 1.0;
-					}
-
-					&.active {
-						font-weight: bold;
-					}
-
-				}
-			}
-		}
-	}
-
-	.mobile-menu--bars {
-		display: inline-block;
+	.header-nav {
 		margin: 0 0 0 auto;
+		height: 100%;
 
-		i {
-			padding: 1rem;
-			border-radius: $border-radius;
-			background-color: $nav-color-theme;
-
-			&:hover {
-				background-color: darken($nav-color-theme, 10%);
-				transition: $nav-animation-time;
-			}
-		}
-	}
-
-	.mobile-menu--label {
-		cursor: pointer;
-	}
-
-	//State 1
-	#mobile-menu--full {
-	  height: 0px;
-	  width: 0px;
-	  *{display: none;}
-	}
-
-	//State 2
-	#toggle:checked {
-		~ #mobile-menu--full {
-		*{display: block;}
-		  height: auto;
-		  width: 100%;
-		  overflow: auto;
-		  position: absolute;
-		  top: $nav-height;
-		  right: 0;
-		  left: 0;
-		  background-color: $nav-background-color;
-		}
-	}
-
-	.mobile-menu--list {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		width: 100%;
-		float: right;
-
-		@media #{$tablet} {
-			display: block;
+		ul {
+			margin: 0;
+			display: flex;
+			align-items: center;
+			height: 100%;
 		}
 
 		li {
-			text-align: right;
-		}
+        display: flex;
+				align-items: stretch;
+				height: 100%;
 
-		a {
+        a {
+          margin: 0 $nav-link-spacing;
+          display: flex;
+          align-items: center;
+					justify-content: center;
+					height: 100%;
 
-			&:hover, &:active {
-				// background-color: $nav-color-theme;
-				border-right: $nav-border-size $nav-color-theme;
-				transition: $nav-animation-time;
-			}
+          color: $white;
+          font-size: $nav-link-font-size;
+          border-bottom: $nav-border-size transparent;
+          transition: $nav-animation-time;
+					text-decoration: none;
 
-			&.active {
-				// background-color: $nav-color-theme;
-				border-right: $nav-border-size $nav-color-theme;
-				// border-right: $nav-border-size darken($nav-color-theme, 50%);
-			}
+          &:hover, &.active { border-bottom: $nav-border-size $white; }
 
-			display: block;
-			font-size: 0.9rem;
-			min-width: $nav-link-size;
-			padding-top: $margin-padding-standard;
-			padding-bottom: $margin-padding-standard;
-			padding-right: $margin-padding-standard;
-			text-transform: uppercase;
-			color: $nav-text-color;
-			text-decoration: none;
+      }
 		}
 	}
 }
-
 
 /*--------------
 Subnavigation Above Articles
@@ -192,7 +94,7 @@ Subnavigation Above Articles
 
 		li {
 			display: inline-block;
-			max-height: $nav-height;
+			max-height: $header-height;
 			cursor: pointer;
 
 			&:not(:first-child) {
@@ -212,11 +114,11 @@ Subnavigation Above Articles
 			text-decoration: none;
 			color: $color-white-1;
 			text-shadow: $shadow-contrast;
-			padding: $margin-padding-standard/2 $margin-padding-standard;
+			padding: calc(#{$margin-padding-standard} / 2) $margin-padding-standard;
 			text-transform: uppercase;
 
 			@media #{$tablet} {
-				padding: $margin-padding-standard/2 $margin-padding-standard;
+				padding: calc(#{$margin-padding-standard} / 2) $margin-padding-standard;
 			}
 		}
 	}

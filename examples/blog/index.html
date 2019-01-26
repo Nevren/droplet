@@ -5,54 +5,26 @@
    <link rel="stylesheet" type="text/css" href="../../css/styles.css">
 </head>
 <body>
-  <nav class='nav'>
-    <div class='flex-wrapper'>
-      <span class='nav-logo'><a href="../">Droplet NavBar</a></span>
-      <ul class='hidden--mobile desktop-menu--list'>
-        <li>
-          <a class="active" href="../">Home</a>
-        </li>
-				<li>
-					<a href="#">Link 2</a>
-				</li>
-				<li>
-					<a href="../forms/">Forms</a>
-				</li>
-      </ul>
+	<header class="header">
+			<span class="header-logo"><a href="#">Droplet NavBar</a></span>
 
-      <section class='mobile-menu--bars hidden--tablet hidden--desktop'>
+			<nav class="header-nav hidden--mobile">
+				<ul>
+					<li><a href="../">Home</a></li>
+					<li><a href="./" class="active">Articles</a></li>
+					<li><a href="../forms">Forms</a></li>
+				</ul>
+			</nav>
 
-        <input id='toggle' type='checkbox' class='hidden'>
-        <label for='toggle' class='mobile-menu--label'><i class='fa fa-bars'>&#9776;</i></label>
+	</header>
 
-        <div id='mobile-menu--full' class='mobile-menu--content'>
-          <div class='mobile-menu--overflow align--center'>
-            <ul class='mobile-menu--list'>
-							<li>
-			          <a class="active" href="../">Home</a>
-			        </li>
-							<li>
-								<a href="#">Link 2</a>
-							</li>
-							<li>
-								<a href="../forms/">Forms</a>
-							</li>
-            </ul>
-          </div>
-        </div>
-
-      </section>
-
-    </div>
-  </nav>
-
-	<section class="banner--flex has-image has-article banner-image--default">
+	<section class="banner--flex has-image banner-image--default">
 	</section>
 
-	<section class="grid-wrapper app-content has-article" id="article">
+	<main class="content has-article" id="article">
 		<div class="grid grid-padding">
 
-      <div class="grid--4 align--left article-header">
+      <div class="grid--4 article-header">
 				<a class="button button--grey" href="../">Back</a>
         <h1 class="text--grey">Article One</h1>
       </div>
@@ -62,47 +34,39 @@
           <li class="active"><a>Sub Link 1</a></li><!--
           --><li><a>Sub Link 2</a></li><!--
           --><li><a>Sub Link 3</a></li><!--
-          --><li><a>Sub Link 4</a></li><!--
         --></ul>
       </div>
 
-      <div class="grid--12 article">
+      <div class="grid--12 card article">
 
-        <div>
+        <article class="grid grid-padding blog-text article-width">
 
-  				<div class='grid grid-padding'>
+						<h1>Article One</h1>
+						<p>Published on 00/00/00 00:00</p>
 
-						<div class='align--middle'>
-							<h1>Article One</h1>
-  						<p>Published on 00/00/00 00:00</p>
-  					</div>
-
-            <div class='align--middle'>
+            <figure class="align--middle">
   						<img src="../assets/passage.jpg" alt="A waterway flowing through a rocky canyon.">
 							<span class="caption">A painting I did.</span>
-  					</div>
+  					</figure>
 
-  					<div class='align--left blog-text article-width'>
-  						<p>This is an example description. This is an example description. This is an example description.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  						<a class='button button--green no-margin' href="#">Link Somewhere</a>
-  					</div>
+						<p>This is an example description. This is an example description. This is an example description.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-  				</div>
+						<div><a class="button button--green no-margin float--right" href="#">Link Somewhere</a></div>
 
-        </div>
+        </article>
 
       </div>
 
 		</div>
-	</section>
+	</main>
 
-	<footer class='footer'>
-		<div class='grid grid-padding grid-wrapper'>
-			<div class='grid--12'>
-					<ul class='footer--links'>
+	<footer class="footer">
+		<div class="grid grid-padding grid-wrapper">
+			<div class="grid--12">
+					<ul class="footer--links">
 						<li class="active"><!--
 						--><a href="#">Link 1</a><!--
 						--></li><!--
@@ -115,8 +79,8 @@
 					</ul>
 				</div>
 			</div>
-			<div class='grid--12'>
-				<p class='footer--copyright'>&copy; Droplet 2016-2018</p>
+			<div class="grid--12">
+				<p class="footer--copyright">&copy; Droplet 2016-2019</p>
 			</div>
 		</div>
 	</footer>

@@ -5,55 +5,28 @@
    <link rel="stylesheet" type="text/css" href="../css/styles.css">
 </head>
 <body>
-  <nav class='nav'>
-    <div class='flex-wrapper'>
-      <span class='nav-logo'><a href="#">Droplet NavBar</a></span>
-      <ul class='hidden--mobile desktop-menu--list'>
-        <li>
-          <a class="active" href="#">Home</a>
-        </li>
-				<li>
-					<a href="#">Link 2</a>
-				</li>
-				<li>
-					<a href="./forms/">Forms</a>
-				</li>
-      </ul>
 
-      <section class='mobile-menu--bars hidden--tablet hidden--desktop'>
+	<header class="header">
+			<span class='header-logo'><a href="#">Droplet NavBar</a></span>
 
-        <input id='toggle' type='checkbox' class='hidden'>
-        <label for='toggle' class='mobile-menu--label'><i class='fa fa-bars'>&#9776;</i></label>
+			<nav class="header-nav hidden--mobile">
+				<ul>
+					<li><a href="./" class="active">Home</a></li>
+					<li><a href="./blog">Articles</a></li>
+					<li><a href="./forms">Forms</a></li>
+				</ul>
+			</nav>
 
-        <div id='mobile-menu--full' class='mobile-menu--content'>
-          <div class='mobile-menu--overflow align--center'>
-            <ul class='mobile-menu--list'>
-							<li>
-			          <a class="active" href="#">Home</a>
-			        </li>
-							<li>
-								<a href="#">Link 2</a>
-							</li>
-							<li>
-								<a href="./forms/">Forms</a>
-							</li>
-            </ul>
-          </div>
-        </div>
+	</header>
 
-      </section>
-
-    </div>
-  </nav>
-
-	<section class="banner--flex has-image has-overlay banner-image--default">
+	<section class="banner--flex has-image banner-image--default">
 		<p class="banner--text">An Example of a Banner</p>
 	</section>
 
-	<section class="grid-wrapper app-content" id="announcements">
+	<main class="content has-banner" id="announcements">
 		<div class="grid grid-padding">
 
-			<div class="grid--4 align--left article-header">
+			<div class="grid--4 article-header">
         <h1 class="text--grey">Topic Feed</h1>
       </div>
 
@@ -61,43 +34,42 @@
         <ul>
           <li class="active"><a>Sub Link 1</a></li><!--
           --><li><a>Sub Link 2</a></li><!--
-          --><li><a>Sub Link 3</a></li><!--
-          --><li><a>Sub Link 4</a></li><!--
-        --></ul>
+          --><li><a>Sub Link 3</a></li>
+				</ul>
       </div>
 
 			<div class='card'>
 				<div class='grid grid--12'>
-					<div class='grid--4 align--middle'>
+					<div class='grid--6 align--center'>
 						<img src="./assets/passage.jpg" alt="A painting I did.">
 					</div>
 
-					<div class='grid--8 align--left blog-text'>
+					<div class='grid--6 blog-text'>
 						<h2>Article One</h2>
 						<p>Published on 00/00/00 00:00</p>
 						<p>This is an example description. This is an example description. This is an example description.</p>
-						<a class='button button--green no-margin' href="./blog">Read More</a>
+						<a class='button button--primary no-margin' href="./blog">Read More</a>
 					</div>
 				</div>
 			</div>
 
 			<div class='card'>
 				<div class='grid grid--12'>
-					<div class='grid--4 align--middle'>
+					<div class='grid--6 align--center'>
 						<img src="./assets/passage.jpg" alt="A painting I did.">
 					</div>
 
-					<div class='grid--8 align--left blog-text'>
+					<div class='grid--6 blog-text'>
 						<h2>Title</h2>
 						<p>Published on 00/00/00 00:00</p>
 						<p>This is an example description. This is an example description. This is an example description.</p>
-						<a class='button button--green no-margin' href="#">Learn More</a>
+						<a class='button button--primary no-margin float-right' href="#">Learn More</a>
 					</div>
 				</div>
 			</div>
 
 		</div>
-	</section>
+	</main>
 
 	<footer class='footer'>
 		<div class='grid grid-padding grid-wrapper'>
@@ -116,7 +88,7 @@
 				</div>
 			</div>
 			<div class='grid--12'>
-				<p class='footer--copyright'>&copy; Droplet 2016-2018</p>
+				<p class='footer--copyright'>&copy; Droplet 2016-2019</p>
 			</div>
 		</div>
 	</footer>

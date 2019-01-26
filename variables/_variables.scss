@@ -58,8 +58,9 @@ $margin-center: 0 auto;
 
 //----- Shadows -----//
 $shadow: 0px 0px 15px $color-black-1;//generic shadow
-$shadow-contrast: 2px 2px 2px $color-black-1;//helps with seeing the object on top of images
+$shadow-contrast: 0px 2px 4px $color-black-1;//helps with seeing the object on top of images
 $shadow-input: 0px 0px 10px;//primarily used for input focus
+$shadow-box: 0 2px 4px 0 rgba(14,30,37,.12);
 
 //----- Animations -----//
 $animation-hover-buttons: background 0.1s ease-in;
@@ -71,7 +72,7 @@ $border-2: 2px solid;
 $border-radius: 2px;
 
 //----- Grid -----//
-$grid-gutter: 1rem !default;
+$grid-gutter: 1rem;
 
 /*These variables are for changes to various
 elements that remain constant (such as images/logos/branding)
@@ -87,7 +88,7 @@ $grid-image-minimum-mobile: 100%;
 /*----- FOOTERS -----*///:footer.scss
 $footer-width: $global-content-width;//($global-content-width)
 
-//----- TTPOGRAPHY -----//
+//----- TYPOGRAPHY -----//
 //Font Sizes
 $font-size-description: 0.9rem;
 $font-size-h1: 3.5rem;
@@ -101,3 +102,21 @@ $font-size-p3: 0.75rem;
 $font-weight-links: bold;
 $font-weight-header: 400;
 $font-weight-logo: 600;
+
+//----- HEADER -----//
+
+//Navigation Bar Height
+$header-height: 4rem;
+$sub-header-height: 3rem;
+$nav-border-size: 4px solid;
+
+//Navigation Link Width
+$nav-link-font-size: 1.2rem;
+$nav-logo-font-size: 2.0rem;
+$nav-link-spacing: calc(#{$margin-padding-standard} / 2);
+
+//Navigation Colors
+$nav-color-theme: $color-white-2;
+$nav-text-color: $color-white-2;
+$nav-background-color:  rgba(34,34,34,0.95);
+$nav-animation-time: border 0.2s ease-out;

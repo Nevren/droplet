@@ -1,5 +1,5 @@
 $banner-flex-height: 350px;
-$banner-gradient: linear-gradient(to right, #7d7e7d 0%,$color-blue 100%) !default;
+$banner-gradient: linear-gradient(to right, $color-primary 0%, $color-blue 100%) !default;
 // $banner-image: "../examples/assets/example2.jpg";//example
 
 .banner--flex {

@@ -5,6 +5,14 @@
 	display: inline-block;
 	padding: $margin-padding-standard;
 	z-index: 1;
+	box-shadow: $shadow-box;
+	margin: $grid-gutter -1rem $grid-gutter 0;
+	@supports(display: grid) { margin: 0 -1rem; }
+
+	@media #{$tablet} {
+		margin: $grid-gutter 0;
+		@supports(display: grid) { margin: 0; }
+	}
 }
 
 .is-link {
