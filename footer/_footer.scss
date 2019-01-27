@@ -23,23 +23,24 @@
 }
 
 .footer--links {
+	ul {
 	//MOBILE
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	text-align: center;
+		li {
+			display: inline-block;
+			max-height: $header-height;
+			cursor: pointer;
 
-	li {
-		display: inline-block;
-		max-height: $header-height;
-		cursor: pointer;
+			&:not(:first-child) {
+				border-left: 1px solid $color-white-1;
+			}
 
-		&:not(:first-child) {
-			border-left: 1px solid $color-white-1;
-		}
-
-		&.active, &:hover {
-			background-color: $color-grey-2;
+			&.active, &:hover {
+				background-color: $color-grey-2;
+			}
 		}
 	}
 

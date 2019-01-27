@@ -502,7 +502,6 @@ Article Specific
   justify-content: flex-start; }
   .article-header h1 {
     margin: 0;
-    padding-left: 1rem;
     color: #ffffff;
     text-shadow: 0px 2px 4px #000000;
     z-index: 1; }
@@ -1436,24 +1435,24 @@ Subnavigation Above Articles
   .footer .footer--copyright, footer .footer--copyright {
     text-align: center; }
 
-.footer--links {
+.footer--links ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   text-align: center; }
-  .footer--links li {
+  .footer--links ul li {
     display: inline-block;
     max-height: 4rem;
     cursor: pointer; }
-    .footer--links li:not(:first-child) {
+    .footer--links ul li:not(:first-child) {
       border-left: 1px solid #ffffff; }
-    .footer--links li.active, .footer--links li:hover {
+    .footer--links ul li.active, .footer--links ul li:hover {
       background-color: #777; }
-  .footer--links a {
-    display: block;
-    text-decoration: none;
-    color: #ffffff;
-    padding: 1rem; }
+.footer--links a {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 1rem; }
 
 .card {
   background-color: #FFFFFF;
