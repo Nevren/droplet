@@ -622,13 +622,9 @@ Article Specific
 
 .grid-padding {
   padding: 1rem 0; }
-  .grid-padding:first-of-type, .grid-padding:last-of-type {
-    padding-top: 0; }
   @media all and (min-width: 680px) {
     .grid-padding {
-      padding: calc(1rem / 2); }
-      .grid-padding:first-of-type, .grid-padding:last-of-type {
-        padding: calc(1rem / 2); } }
+      padding: calc(1rem / 2); } }
   @supports (display: grid) {
     .grid-padding {
       padding: 1rem; } }

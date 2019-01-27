@@ -24,10 +24,10 @@
 
 %fallback-padding {
 	padding: $grid-gutter 0;
-	&:first-of-type, &:last-of-type { padding-top: 0; }
+	// &:first-of-type, &:last-of-type { padding-top: 0; }
 	@media #{$tablet} {
 		padding: calc(#{$grid-gutter} / 2);
-		&:first-of-type, &:last-of-type { padding: calc(#{$grid-gutter} / 2); }
+		// &:first-of-type, &:last-of-type { padding: calc(#{$grid-gutter} / 2); }
 	}
 	@supports(display: grid) { padding: $grid-gutter; }
 }
